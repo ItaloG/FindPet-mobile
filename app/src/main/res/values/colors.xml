@@ -16,6 +16,8 @@
     <color name="cinza">#DACCCCCC</color>
     <color name="cinza_claro">#E6E6E6</color>
     <color name="bege">#80D4C6A9</color>
+    <color name="laranjaClaro">#80CB831D</color>
+    <color name="tomLaranja">#A6CB831D</color>
 
 
 </resources>

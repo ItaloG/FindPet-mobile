@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".esqueci_senha_etapa_3">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/marromClaro"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Esqueci minha senha"
+            android:textSize="30sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="60dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto">
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Defina sua nova senha"
+            android:textSize="20sp"
+            android:layout_marginTop="120dp"
+            android:fontFamily="@font/roboto"
+            android:layout_marginStart="35dp"
+            android:textStyle="bold">
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="170dp"
+            android:hint="Senha">
+
+            <EditText
+                android:id="@+id/et_nova_senha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:textSize="18dp"
+                android:fontFamily="@font/montserrat"
+                android:inputType="textPersonName"
+                android:layout_marginLeft="8dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="260dp"
+            android:hint="Confirmar senha">
+
+            <EditText
+                android:id="@+id/et_confirmar_senha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:textSize="18dp"
+                android:fontFamily="@font/montserrat"
+                android:inputType="textPersonName"
+                android:layout_marginLeft="8dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/botao_cadastroIn"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/borda_marrom_claro"
+            android:text="Alterar senha"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:inputType="textPersonName">
+
+        </Button>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,9 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppFindPet">
-        <activity android:name=".tela_feed"></activity>
+        <activity android:name=".esqueci_senha_etapa_3"></activity>
+        <activity android:name=".Esqueci_senha_etapa_2" />
+        <activity android:name=".Esqueci_senha_etapa_1" />
+        <activity android:name=".Editar_perfil_instituicao" />
+        <activity android:name=".Editar_perfil_usuario_comum" />
+        <activity android:name=".tela_feed" />
         <activity android:name=".tela_login" />
-        <activity android:name=".tela_cadastro_usuarioComum" />
+        <activity android:name=".Tela_cadastro_usuarioComum" />
         <activity android:name=".tela_cadastro_instituicoes" />
         <activity android:name=".tela_escolha_cadastro" />
         <activity android:name=".MainActivity">

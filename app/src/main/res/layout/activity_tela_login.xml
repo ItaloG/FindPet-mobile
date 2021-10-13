@@ -11,6 +11,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/fundo_login"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -19,12 +20,14 @@
             android:text="Faça seu login"
             android:textColor="@android:color/white"
             android:textSize="20sp" />
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
             android:hint="Email">
+
             <EditText
                 android:id="@+id/et_email"
                 android:layout_width="300dp"
@@ -35,6 +38,7 @@
                 android:inputType="textPersonName"
                 android:padding="10dp"/>
         </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
@@ -63,7 +67,6 @@
                 android:layout_gravity="left"
                 android:layout_marginStart="50dp"
                 android:layout_marginLeft="-10dp"
-                android:layout_toLefttOf="@+id/tv_esqueceu_senha"
                 android:buttonTint="@color/white"
                 android:enabled="false"
                 android:scaleX="0.90"
@@ -71,6 +74,7 @@
                 android:text="lembrar-me"
                 android:textColor="@color/white"
                 android:textSize="18dp" />
+
             <TextView
                 android:id="@+id/tv_esqueceu_senha"
                 android:layout_width="wrap_content"
@@ -85,6 +89,7 @@
                 android:textColor="@android:color/holo_blue_dark"
                 android:layout_marginLeft="35dp" />
         </RelativeLayout>
+
         <Button
             android:id="@+id/botao_entrar"
             android:layout_width="200dp"
@@ -97,6 +102,7 @@
             android:text="Entrar"
             android:textColor="@color/white"
             android:textSize="20sp"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -105,6 +111,7 @@
             android:layout_marginTop="15dp"
             android:textColor="@android:color/white"
             android:textSize="20sp" />
+
         <Button
             android:id="@+id/botao_google"
             android:layout_width="300dp"
