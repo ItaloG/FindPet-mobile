@@ -12,15 +12,12 @@ class tela_campanhas : AppCompatActivity() {
 
         supportActionBar!!.title = "Nova Campanha"
 
-        fun onCreateOptionsMenu(menu: Menu?): Boolean {
-            val inflater = menuInflater
-            inflater.inflate(R.menu.menu, menu)
-            return true
-        }
 
-        fun onOptionsItemSelected(item: MenuItem): Boolean {
+    }
 
-            return super.onOptionsItemSelected(item)
-        }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.menu, menu)
+        return true
     }
 }
