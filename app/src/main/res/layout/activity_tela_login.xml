@@ -36,7 +36,7 @@
                 android:background="@drawable/borda_cinza"
                 android:fontFamily="@font/roboto"
                 android:inputType="textPersonName"
-                android:padding="10dp"/>
+                android:padding="10dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -45,6 +45,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
             android:hint="Senha">
+
             <EditText
                 android:id="@+id/et_senha"
                 android:layout_width="300dp"
@@ -53,7 +54,7 @@
                 android:background="@drawable/borda_cinza"
                 android:fontFamily="@font/roboto"
                 android:inputType="textPersonName"
-                android:padding="10dp"/>
+                android:padding="10dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <RelativeLayout
@@ -80,14 +81,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/checkbox_lembrar"
+                android:layout_marginStart="35dp"
+                android:layout_marginLeft="35dp"
                 android:layout_marginTop="-29dp"
                 android:layout_marginRight="60dp"
                 android:layout_toRightOf="@+id/checkbox_lembrar"
                 android:text="esqueceu a senha?"
-                android:textSize="17dp"
-                android:layout_marginStart="35dp"
                 android:textColor="@android:color/holo_blue_dark"
-                android:layout_marginLeft="35dp" />
+                android:textSize="17dp" />
         </RelativeLayout>
 
         <Button
@@ -101,14 +102,14 @@
             android:inputType="textPersonName"
             android:text="Entrar"
             android:textColor="@color/white"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="ou"
             android:layout_marginTop="15dp"
+            android:text="ou"
             android:textColor="@android:color/white"
             android:textSize="20sp" />
 
@@ -118,13 +119,13 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
-            android:drawableLeft="@drawable/google"
-            android:text="Continuar com Google"
-            android:inputType="textPersonName"
-            android:textSize="20sp"
-            android:gravity="center"
             android:background="@drawable/borda_branca"
-            android:padding="10dp"/>
+            android:drawableLeft="@drawable/google"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:text="Continuar com Google"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
