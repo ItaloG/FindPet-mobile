@@ -9,7 +9,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/marrom"
+        android:background="@color/marromClaro"
         android:orientation="horizontal"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
@@ -31,8 +31,7 @@
             android:gravity="center"
             android:text="Cadastrar-se"
             android:textColor="@color/white"
-            android:textSize="35sp">
-        </TextView>
+            android:textSize="35sp"></TextView>
 
         <Button
             android:id="@+id/botao_entrar"
@@ -40,26 +39,27 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="0dp"
-            android:background="@drawable/rounded_corner"
+            android:background="@drawable/borda_marrom_escuro"
             android:fontFamily="@font/roboto"
+            android:inputType="textPersonName"
             android:text="Sou um usuário"
-            android:textSize="20sp"
-            android:inputType="textPersonName">
+            android:textColor="@android:color/white"
+            android:textSize="20sp">
 
         </Button>
 
         <Button
-            android:id="@+id/botao_cadastrar"
+            android:id="@+id/btn_cadsatrar_instituicao"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:text="Sou uma instituição"
-            android:fontFamily="@font/roboto"
-            android:textSize="20sp"
             android:layout_gravity="center"
             android:layout_marginTop="70dp"
-            android:background="@drawable/rounded_corner"
-            android:inputType="textPersonName">
-        </Button>
+            android:background="@drawable/borda_marrom_escuro"
+            android:fontFamily="@font/roboto"
+            android:inputType="textPersonName"
+            android:text="Sou uma instituição"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"/>
 
     </FrameLayout>
 

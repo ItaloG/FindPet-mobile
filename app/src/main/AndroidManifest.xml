@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppFindPet">
         <activity android:name=".tela_feed"></activity>
-        <activity android:name=".tela_login" />
         <activity android:name=".tela_cadastro_usuarioComum" />
         <activity android:name=".tela_cadastro_instituicoes" />
         <activity android:name=".tela_escolha_cadastro" />
