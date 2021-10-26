@@ -18,7 +18,7 @@ class tela_escolha_cadastro : AppCompatActivity() {
         buttonCadastroInstituicao = findViewById(R.id.btn_cadsatrar_instituicao)
 
         buttonCadastroInstituicao.setOnClickListener {
-            val intent = Intent(this, tela_escolha_cadastro::class.java)
+            val intent = Intent(this, tela_cadastro_instituicoes::class.java)
             startActivity(intent)
         }
 
