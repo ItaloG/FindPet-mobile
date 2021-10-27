@@ -13,7 +13,7 @@ object MaskFormatUtil {
     const val FORMAT_HOUR = "##:##"
     const val FORMAT_FONE_COD_AREA = "(##) ####-#####"
     const val FORMAT_FONE_COD_COMP = "+##(##)####-#####"
-    const val FORMAT_FONE = "#####-####"
+    const val FORMAT_FONE = "####-####"
     const val FORMAT_COD_PAIS = "+##"
     const val FORMAT_COD_AREA = "(##)"
 

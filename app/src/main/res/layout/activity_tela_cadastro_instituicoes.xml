@@ -105,7 +105,7 @@
             android:background="@drawable/borda_cinza">
 
             <EditText
-                android:id="@+id/et_senha"
+                android:id="@+id/et_celular_instituicao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
@@ -140,7 +140,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
-                android:hint="Rua ou Avenida"
+                android:hint="Rua/Avenida"
                 android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
 
