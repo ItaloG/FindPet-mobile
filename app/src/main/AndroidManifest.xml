@@ -9,12 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppFindPet">
+        <activity android:name=".telaPerfilAnimalActivity"></activity>
         <activity android:name=".tela_campanhas">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity android:name=".esqueci_senha_etapa_3" />
         <activity android:name=".Esqueci_senha_etapa_2" />
@@ -22,7 +25,7 @@
         <activity android:name=".Editar_perfil_instituicao" />
         <activity android:name=".Editar_perfil_usuario_comum" />
         <activity android:name=".tela_feed" />
-        <activity android:name=".tela_login" >
+        <activity android:name=".tela_login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,20 +33,24 @@
             </intent-filter>
         </activity>
         <activity android:name=".Tela_cadastro_usuarioComum" />
-        <activity android:name=".tela_cadastro_instituicoes" >
-<!--                        <intent-filter>-->
-<!--                            <action android:name="android.intent.action.MAIN" />-->
+        <activity android:name=".tela_cadastro_instituicoes">
 
-<!--                            <category android:name="android.intent.category.LAUNCHER" />-->
-<!--                        </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity android:name=".tela_escolha_cadastro" />
         <activity android:name=".MainActivity">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
 
         <meta-data
