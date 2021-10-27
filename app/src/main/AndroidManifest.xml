@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppFindPet">
-        <activity android:name=".telaPerfilAnimalActivity"></activity>
+        <activity android:name=".perfil_instituicao"></activity>
+        <activity android:name=".telaPerfilAnimalActivity" />
         <activity android:name=".tela_campanhas">
 
             <!-- <intent-filter> -->
