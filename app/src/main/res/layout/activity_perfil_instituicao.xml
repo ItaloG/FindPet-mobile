@@ -58,10 +58,10 @@
                     android:layout_marginTop="-50dp"
                     android:layout_marginBottom="90dp"
                     android:gravity="center"
+                    android:scaleType="centerCrop"
                     android:text="Nome da Ong"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:scaleType="centerCrop"/>
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/txt_avaliacao"
@@ -71,11 +71,11 @@
                     android:layout_marginLeft="95dp"
                     android:layout_marginTop="-90dp"
                     android:layout_marginBottom="90dp"
+                    android:drawableStart="@drawable/ic_baseline_star_24"
                     android:gravity="center"
                     android:text="3.0"
-                    android:drawableStart="@drawable/ic_baseline_star_24"
                     android:textColor="@color/black"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/nome_email_instituicao"
@@ -131,9 +131,10 @@
                     android:layout_height="33dp"
                     android:layout_gravity="right"
                     android:layout_marginTop="-35dp"
-                    android:textSize="13dp"
+                    android:background="@drawable/contorno_marrom"
                     android:text="Apoiar"
-                    android:background="@drawable/contorno_marrom"/>
+                    android:textSize="13dp" />
+
                 <TextView
                     android:id="@+id/txt_descricao"
                     android:layout_width="wrap_content"
@@ -142,11 +143,11 @@
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="90dp"
                     android:gravity="left"
+                    android:scaleType="centerCrop"
                     android:text="Lorem ipsum dolor sit amet. Aut amet
                     minus ut quam minus quo consequatur possimus! Sed quia consectetur et odio adipisci aut pariatur earum ut cumque"
                     android:textColor="@color/black"
-                    android:textSize="13sp"
-                    android:scaleType="centerCrop"/>
+                    android:textSize="13sp" />
 
                 <TextView
                     android:id="@+id/quantidade_animais"
@@ -155,10 +156,10 @@
                     android:layout_marginTop="-70dp"
                     android:layout_marginBottom="90dp"
                     android:gravity="center"
+                    android:scaleType="centerCrop"
                     android:text="Animais disponíveis na instituição: 87"
                     android:textColor="@color/black"
-                    android:textSize="13sp"
-                    android:scaleType="centerCrop"/>
+                    android:textSize="13sp" />
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/card_view_profile"
@@ -175,8 +176,8 @@
                         android:layout_width="90dp"
                         android:layout_height="90dp"
                         android:layout_marginBottom="90dp"
-                        android:gravity="center"
                         android:drawableStart="@drawable/cachorro"
+                        android:gravity="center"
                         android:scaleType="centerCrop"
                         android:text="Adicionar imagens ou videos"
                         android:textSize="13sp" />
@@ -187,35 +188,35 @@
                         android:layout_height="25dp"
                         android:layout_marginTop="90dp"
                         android:gravity="center"
+                        android:scaleType="centerCrop"
                         android:text="Nome e idade"
                         android:textColor="@color/black"
-                        android:textSize="13sp"
-                        android:scaleType="centerCrop"/>
+                        android:textSize="13sp" />
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/card_view_pro"
                     android:layout_width="90dp"
                     android:layout_height="120dp"
-                    android:drawableStart="@drawable/cachorro"
+                    android:layout_gravity="center"
                     android:layout_marginTop="-120dp"
+                    android:drawableStart="@drawable/cachorro"
                     app:cardCornerRadius="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_gravity="center">
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
                         android:id="@+id/add_img2"
                         android:layout_width="wrap_content"
                         android:layout_height="90dp"
                         android:layout_marginBottom="90dp"
-                        android:gravity="center"
                         android:drawableStart="@drawable/cachorro"
-                        android:text="Adicionar imagens ou videos"
+                        android:gravity="center"
+                        android:scaleType="centerCrop"
 
-                        android:textSize="13sp"
-                        android:scaleType="centerCrop"/>
+                        android:text="Adicionar imagens ou videos"
+                        android:textSize="13sp" />
 
                     <TextView
                         android:id="@+id/txt_caracteristicas2"
@@ -223,10 +224,10 @@
                         android:layout_height="25dp"
                         android:layout_marginTop="90dp"
                         android:gravity="center"
+                        android:scaleType="centerCrop"
                         android:text="Nome e idade"
                         android:textColor="@color/black"
-                        android:textSize="13sp"
-                        android:scaleType="centerCrop"/>
+                        android:textSize="13sp" />
 
 
                 </androidx.cardview.widget.CardView>
@@ -235,23 +236,23 @@
                     android:id="@+id/card_view_prof"
                     android:layout_width="90dp"
                     android:layout_height="120dp"
+                    android:layout_gravity="end"
                     android:layout_marginTop="-120dp"
                     app:cardCornerRadius="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_gravity="end">
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
                         android:id="@+id/add_img3"
                         android:layout_width="wrap_content"
                         android:layout_height="90dp"
                         android:layout_marginBottom="90dp"
-                        android:gravity="center"
                         android:drawableStart="@drawable/cachorro"
+                        android:gravity="center"
+                        android:scaleType="centerCrop"
                         android:text="Adicionar imagens ou videos"
-                        android:textSize="13sp"
-                        android:scaleType="centerCrop"></TextView>
+                        android:textSize="13sp"></TextView>
 
                     <TextView
                         android:id="@+id/txt_caracteristicas3"
@@ -259,10 +260,10 @@
                         android:layout_height="25dp"
                         android:layout_marginTop="90dp"
                         android:gravity="center"
+                        android:scaleType="centerCrop"
                         android:text="Nome e idade"
                         android:textColor="@color/black"
-                        android:textSize="13sp"
-                        android:scaleType="centerCrop"></TextView>
+                        android:textSize="13sp"></TextView>
                 </androidx.cardview.widget.CardView>
 
                 <TextView
@@ -272,10 +273,10 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="90dp"
                     android:gravity="center"
+                    android:scaleType="centerCrop"
                     android:text="Campanhas"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:scaleType="centerCrop"></TextView>
+                    android:textSize="18sp"></TextView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/card_add_campanhas"
@@ -292,11 +293,11 @@
                         android:layout_width="300dp"
                         android:layout_height="80dp"
                         android:layout_marginBottom="90dp"
-                        android:gravity="center"
                         android:background="@color/cinza"
+                        android:gravity="center"
+                        android:scaleType="centerCrop"
                         android:text="sliderShow"
-                        android:textSize="13sp"
-                        android:scaleType="centerCrop"/>
+                        android:textSize="13sp" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -328,9 +329,9 @@
                         android:layout_height="90dp"
                         android:layout_marginBottom="90dp"
                         android:gravity="center"
+                        android:scaleType="centerCrop"
                         android:text="Adicionar imagem"
-                        android:textSize="13sp"
-                        android:scaleType="centerCrop"/>
+                        android:textSize="13sp" />
 
                     <TextView
                         android:id="@+id/txt_caracteristicasFun"
@@ -338,10 +339,10 @@
                         android:layout_height="20dp"
                         android:layout_marginTop="90dp"
                         android:gravity="center"
+                        android:scaleType="centerCrop"
                         android:text="Nome"
                         android:textColor="@color/black"
-                        android:textSize="13sp"
-                        android:scaleType="centerCrop"></TextView>
+                        android:textSize="13sp"></TextView>
 
                 </androidx.cardview.widget.CardView>
 
@@ -349,12 +350,12 @@
                     android:id="@+id/card_view_proFun2"
                     android:layout_width="90dp"
                     android:layout_height="110dp"
+                    android:layout_gravity="center"
                     android:layout_marginTop="-110dp"
                     app:cardCornerRadius="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_gravity="center">
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
                         android:id="@+id/add_imgFun2"
@@ -362,9 +363,9 @@
                         android:layout_height="90dp"
                         android:layout_marginBottom="90dp"
                         android:gravity="center"
+                        android:scaleType="centerCrop"
                         android:text="Adicionar imagenm"
-                        android:textSize="13sp"
-                        android:scaleType="centerCrop"></TextView>
+                        android:textSize="13sp"></TextView>
 
                     <TextView
                         android:id="@+id/txt_caracteristicasFun2"
@@ -372,10 +373,10 @@
                         android:layout_height="20dp"
                         android:layout_marginTop="90dp"
                         android:gravity="center"
+                        android:scaleType="centerCrop"
                         android:text="Nome"
                         android:textColor="@color/black"
-                        android:textSize="13sp"
-                        android:scaleType="centerCrop"></TextView>
+                        android:textSize="13sp"></TextView>
 
 
                 </androidx.cardview.widget.CardView>
@@ -384,12 +385,12 @@
                     android:id="@+id/card_view_proFun3"
                     android:layout_width="90dp"
                     android:layout_height="110dp"
+                    android:layout_gravity="end"
                     android:layout_marginTop="-110dp"
                     app:cardCornerRadius="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_gravity="end">
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
                         android:id="@+id/add_imgFun3"
@@ -397,9 +398,9 @@
                         android:layout_height="90dp"
                         android:layout_marginBottom="90dp"
                         android:gravity="center"
+                        android:scaleType="centerCrop"
                         android:text="Adicionar imagem"
-                        android:textSize="13sp"
-                        android:scaleType="centerCrop"/>
+                        android:textSize="13sp" />
 
                     <TextView
                         android:id="@+id/txt_caracteristicasFun3"
@@ -407,10 +408,10 @@
                         android:layout_height="20dp"
                         android:layout_marginTop="90dp"
                         android:gravity="center"
+                        android:scaleType="centerCrop"
                         android:text="Nome"
                         android:textColor="@color/black"
-                        android:textSize="13sp"
-                        android:scaleType="centerCrop"/>
+                        android:textSize="13sp" />
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
