@@ -80,18 +80,6 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
             }
         }
 
-        var nome = editTextNome.text
-        var tipoEstabelecimento = spinnerTipoEstabelecimento.selectedItemPosition
-        var cnpj = editTextCnpj.text
-        var email = editTextEmail.text
-        var senha = editTextSenha.text
-        var telefone = editTextTelefone.text
-        var celular = editTextCelular.text
-        var cep = editTextCep.text
-        var logradouro = editTextRua.text
-        var numero = editTextNumero.text
-        var complemento = editTextComplemento.text
-
         buttonCadastrar.setOnClickListener {
             criarInstituicao()
         }
@@ -141,7 +129,7 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
             override fun onResponse(call: Call<Instituicao>, response: Response<Instituicao>) {
                 val instituicao = response.body()
 
-                Log.i("xpto", instituicao!!.nome)
+                Log.i("xpto", instituicao!!.toString())
             }
 
             override fun onFailure(call: Call<Instituicao>, t: Throwable) {

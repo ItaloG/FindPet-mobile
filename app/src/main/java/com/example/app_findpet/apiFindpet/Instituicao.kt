@@ -1,6 +1,7 @@
 package com.example.app_findpet.apiFindpet
 
 class Instituicao {
+    var id: Int = 0
     var nome: String = ""
     var tipoEstabelecimento: Int = 0
     var cnpj: String = ""
@@ -12,4 +13,22 @@ class Instituicao {
     var cep: String = ""
     var numero: Int = 0
     var complemento: String = ""
+    var token: String = ""
+
+
+    override fun toString(): String {
+        return "Instituicao(id='$id', " +
+                "nome='$nome', " +
+                "tipoEstabelecimento='$tipoEstabelecimento', " +
+                "cnpj='$cnpj', " +
+                "email='$email', " +
+                "senha='$senha', " +
+                "telefone='$telefone', " +
+                "celular='$celular', " +
+                "logradouro='$logradouro', " +
+                "cep='$cep', " +
+                "numero='$numero', " +
+                "complemento='$complemento'," +
+                "token='$token')"
+    }
 }
