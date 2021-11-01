@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.app_findpet">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppFindPet">
-        <activity android:name=".tela_feed"></activity>
+        <activity android:name=".perfilInstituicaoVisaoInstituicaoActivity"></activity>
+        <activity android:name=".perfilAnimalActivity" />
+        <activity android:name=".campanhasActivity" />
+        <activity android:name=".perfilInstituicaoActivity" />
+        <activity android:name=".esqueciSenhaEtapa3Activity" />
+        <activity android:name=".esqueciSenhaEtapa2Activity" />
+        <activity android:name=".esqueciSenhaEtapa1Activity" />
+        <activity android:name=".editarPerfilUsuarioActivity" />
+        <activity android:name=".editarPerfilInstituicaoActivity" />
+        <activity android:name=".tela_feed" />
         <activity android:name=".tela_cadastro_usuarioComum" />
         <activity android:name=".tela_cadastro_instituicoes" />
         <activity android:name=".tela_escolha_cadastro" />

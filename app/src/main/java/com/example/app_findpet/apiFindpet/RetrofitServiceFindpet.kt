@@ -5,6 +5,6 @@ import retrofit2.http.Body
 import retrofit2.http.POST
 
 interface RetrofitServiceFindpet {
-    @POST("/cadastro/instituicao")
+    @POST("cadastro/instituicao")
     fun criarInstituicao(@Body instituicao: Instituicao): Call<Instituicao>
 }

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:orientation="vertical"
+    tools:context=".perfilAnimalActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_header"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/marromClaro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_principal"
+        android:layout_width="370dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="-50dp"
+        android:layout_marginBottom="-48dp"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="15dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="32dp">
+
+            <ImageView
+                android:id="@+id/imagem_ong"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_baseline_pets_24" />
+
+            <TextView
+                android:id="@+id/titulo_ong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="-50dp"
+                android:layout_marginBottom="90dp"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                android:text="Nome do animal"
+                android:textColor="@color/black"
+                android:textSize="20sp"></TextView>
+
+            <TextView
+                android:id="@+id/txt_add_avaliacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="-90dp"
+                android:layout_marginBottom="90dp"
+                android:gravity="center"
+                android:text="Adicionar avaliações"
+                android:textColor="@color/cinza"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/nome_instituto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-90dp"
+                android:drawableStart="@drawable/ic_baseline_home_24"
+                android:drawablePadding="3dp"
+                android:fontFamily="@font/roboto"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:text="Instituto Luisa Mell"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txt_descricao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="90dp"
+                android:gravity="left"
+                android:scaleType="centerCrop"
+                android:text="Lorem ipsum dolor sit amet. Aut amet
+                 minus ut quam minus quo consequatur possimus! Sed quia consectetur et odio adipisci aut pariatur earum ut cumque"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/add_img"
+                android:layout_width="95dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="-70dp"
+                android:layout_toLeftOf="@+id/add_img2"
+                android:background="@drawable/borda_laranja_claro"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                android:text="Adotar"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/add_img2"
+                android:layout_width="95dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="-40dp"
+                android:layout_marginRight="25dp"
+                android:layout_toRightOf="@+id/add_img"
+                android:background="@drawable/borda_laranja_claro"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                android:text="Ver ONG"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/text_galeria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="90dp"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                android:text="Galeria"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_add_campanhas"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_marginTop="-80dp"
+                app:cardCornerRadius="10dp">
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/text_informacoes_importantes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="90dp"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                android:text="Informações importantes"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-80dp"
+                android:stretchColumns="1">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_column="1"
+                        android:padding="3dip"
+                        android:text="Nome" />
+
+                    <TextView
+                        android:gravity="left"
+                        android:padding="3dip"
+                        android:text="Pipoca" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_column="1"
+                        android:padding="3dip"
+                        android:text="Idade" />
+
+                    <TextView
+                        android:gravity="left"
+                        android:padding="3dip"
+                        android:text="3 anos" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_column="1"
+                        android:padding="3dip"
+                        android:text="Condição Especial" />
+
+                    <TextView
+                        android:gravity="left"
+                        android:padding="3dip"
+                        android:text="Nenhuma" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_column="1"
+                        android:padding="3dip"
+                        android:text="Castrado(a)" />
+
+                    <TextView
+                        android:gravity="left"
+                        android:padding="3dip"
+                        android:text="Sim" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/text_historico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                android:text="Histórico"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/historico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="left"
+                android:text="Lorem ipsum dolor sit amet. Aut amet
+                 minus ut quam minus quo consequatur possimus! Sed quia consectetur et odio adipisci aut pariatur earum ut cumque"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

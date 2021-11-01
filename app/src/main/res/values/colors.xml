@@ -8,14 +8,14 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="marrom">#654D41</color>
-    <color name="marromClaro">#C98822</color>
+    <color name="marromClaro">#D4C6A9</color>
     <color name="marromEscuro">#CD8E5500</color>
     <color name="marrommClarinho">#0D8E5500</color>
     <color name="blue">#147AD6</color>
     <color name="laranja">#E8CB831D</color>
+    <color name="laranjaClaro">#80CB831D</color>
     <color name="cinza">#DACCCCCC</color>
     <color name="cinza_claro">#E6E6E6</color>
     <color name="bege">#80D4C6A9</color>
-
-
+    <color name="amarelo">#FFC107</color>
 </resources>
