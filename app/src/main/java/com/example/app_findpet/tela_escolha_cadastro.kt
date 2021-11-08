@@ -8,6 +8,7 @@ import android.widget.Button
 class tela_escolha_cadastro : AppCompatActivity() {
 
     lateinit var buttonCadastroInstituicao: Button
+    lateinit var buttonCadastroUsuario: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,6 +17,13 @@ class tela_escolha_cadastro : AppCompatActivity() {
         supportActionBar!!.hide()
 
         buttonCadastroInstituicao = findViewById(R.id.btn_cadsatrar_instituicao)
+        buttonCadastroUsuario = findViewById(R.id.btn_cadastro_usuario)
+
+        buttonCadastroUsuario.setOnClickListener {
+            val intent = Intent(this, tela_cadastro_usuarioComum::class.java)
+            startActivity(intent)
+        }
+
 
         buttonCadastroInstituicao.setOnClickListener {
             val intent = Intent(this, tela_cadastro_instituicoes::class.java)

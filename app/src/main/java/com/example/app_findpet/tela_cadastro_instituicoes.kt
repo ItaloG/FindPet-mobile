@@ -1,5 +1,6 @@
 package com.example.app_findpet
 
+import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -50,6 +51,13 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
         editTextNumero = findViewById(R.id.et_numero_instituicao)
         editTextComplemento = findViewById(R.id.et_comlemento_instituicao)
         buttonCadastrar = findViewById(R.id.botao_cadastro_instituicao)
+
+        editTextCnpj.addTextChangedListener(
+            MaskFormatUtil.mask(
+                editTextCnpj,
+                MaskFormatUtil.FORMAT_CNPJ
+            )
+        )
 
         editTextTelefone.addTextChangedListener(
             MaskFormatUtil.mask(
@@ -106,6 +114,11 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
         })
     }
 
+    private fun abrirPerfil() {
+        val intent = Intent(this, perfilInstituicaoVisaoInstituicaoActivity::class.java)
+        startActivity(intent)
+    }
+
     private  fun criarInstituicao() {
         var instituicao =  Instituicao()
 
@@ -129,11 +142,29 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
             override fun onResponse(call: Call<Instituicao>, response: Response<Instituicao>) {
                 val instituicao = response.body()
 
+                val dados = getSharedPreferences("dados_instituicao", Context.MODE_PRIVATE)
+                val editor = dados.edit()
+
+                editor.putString("nome", instituicao!!.nome)
+                editor.putInt("tipoEstabelecimento", instituicao!!.tipoEstabelecimento)
+                editor.putString("cnpj", instituicao!!.cnpj)
+                editor.putString("email", instituicao!!.email)
+                editor.putString("senha", instituicao!!.senha)
+                editor.putString("telefone", instituicao!!.telefone)
+                editor.putString("celular", instituicao!!.celular)
+                editor.putString("logradouro", instituicao!!.logradouro)
+                editor.putString("cep", instituicao!!.cep)
+                editor.putInt("numero", instituicao!!.numero)
+                editor.putString("complemento", instituicao!!.complemento)
+
+                editor.apply()
+
+                abrirPerfil()
+
                 Log.i("xpto", instituicao!!.toString())
             }
 
             override fun onFailure(call: Call<Instituicao>, t: Throwable) {
-                val s = t.message
                 Log.i("xpto", t.message.toString())
             }
 
@@ -160,4 +191,3 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
 //}
 
 //parte de trocar a imagem
-
