@@ -10,4 +10,7 @@ interface RetrofitServiceFindpet {
 
     @POST("cadastro/usuario")
     fun criarUsuario(@Body usuario: Usuario): Call<Usuario>
+
+    @POST("login")
+    fun login(@Body login: Login): Call<Login>
 }
