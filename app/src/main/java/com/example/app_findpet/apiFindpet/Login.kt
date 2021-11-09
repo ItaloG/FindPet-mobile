@@ -5,8 +5,10 @@ class Login {
     var id: Int = 0
     var nome: String = ""
     var cpf: String = ""
-    var tipoEstabelecimento: Int = 0
     var cnpj: String = ""
+    var tipoEstabelecimento: Int = 0
+    var url_foto_perfil: String = ""
+    var url_foto_banner: String = ""
     var email: String = ""
     var senha: String = ""
     var telefone: String = ""
@@ -21,6 +23,8 @@ class Login {
         return "Login(id='$id', " +
                 "nome='$nome', " +
                 "cpf='$cpf', " +
+                "url_foto_perfil='$url_foto_perfil', " +
+                "url_foto_banner='$url_foto_banner', " +
                 "tipoEstabelecimento='$tipoEstabelecimento', " +
                 "cnpj='$cnpj', " +
                 "email='$email', " +

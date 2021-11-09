@@ -136,7 +136,7 @@ class tela_cadastro_usuarioComum : AppCompatActivity() {
             override fun onResponse(call: Call<Usuario>, response: Response<Usuario>) {
                 val usuario = response.body()
 
-                val dados = getSharedPreferences("dados_usuarios", Context.MODE_PRIVATE)
+                val dados = getSharedPreferences("dados_usuario", Context.MODE_PRIVATE)
                 val editor = dados.edit()
 
                 editor.putString("nome", usuario!!.nome)

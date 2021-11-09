@@ -142,7 +142,7 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
             override fun onResponse(call: Call<Instituicao>, response: Response<Instituicao>) {
                 val instituicao = response.body()
 
-                val dados = getSharedPreferences("dados_instituicao", Context.MODE_PRIVATE)
+                val dados = getSharedPreferences("dados_usuario", Context.MODE_PRIVATE)
                 val editor = dados.edit()
 
                 editor.putString("nome", instituicao!!.nome)

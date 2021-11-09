@@ -1,5 +1,6 @@
 package com.example.app_findpet
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -58,6 +59,28 @@ class MainActivity : AppCompatActivity() {
         call.enqueue(object : Callback<Login> {
             override fun onResponse(call: Call<Login>, response: Response<Login>) {
                 val usuario = response.body()
+
+                val dados = getSharedPreferences("dados_usuario", Context.MODE_PRIVATE)
+                val editor = dados.edit()
+
+                editor.putInt("id", usuario!!.id)
+                editor.putString("nome", usuario!!.nome)
+                editor.putString("cpf", usuario!!.cpf)
+                editor.putString("cnpj", usuario!!.cnpj)
+                editor.putInt("tipoEstabelecimento", usuario!!.tipoEstabelecimento)
+                editor.putString("url_foto_perfil", usuario!!.url_foto_perfil)
+                editor.putString("url_foto_banner", usuario!!.url_foto_banner)
+                editor.putString("email", usuario!!.email)
+                editor.putString("senha", usuario!!.senha)
+                editor.putString("telefone", usuario!!.telefone)
+                editor.putString("celular", usuario!!.celular)
+                editor.putString("logradouro", usuario!!.logradouro)
+                editor.putString("cep", usuario!!.cep)
+                editor.putInt("numero", usuario!!.numero)
+                editor.putString("complemento", usuario!!.complemento)
+                editor.putString("token", usuario!!.token)
+
+                editor.apply()
 
                 Log.i("xpto", usuario.toString())
             }
