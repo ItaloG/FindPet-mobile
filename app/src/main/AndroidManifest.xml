@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppFindPet">
-        <activity android:name=".perfilInstituicaoVisaoInstituicaoActivity"></activity>
+        <activity android:name=".perfilInstituicaoVisaoInstituicaoActivity">
+
+        </activity>
         <activity android:name=".perfilAnimalActivity" />
         <activity android:name=".campanhasActivity" />
         <activity android:name=".perfilInstituicaoActivity" />
@@ -19,7 +21,9 @@
         <activity android:name=".esqueciSenhaEtapa2Activity" />
         <activity android:name=".esqueciSenhaEtapa1Activity" />
         <activity android:name=".editarPerfilUsuarioActivity" />
-        <activity android:name=".editarPerfilInstituicaoActivity" />
+        <activity android:name=".editarPerfilInstituicaoActivity">
+
+        </activity>
         <activity android:name=".tela_feed" />
         <activity android:name=".tela_cadastro_usuarioComum" />
         <activity android:name=".tela_cadastro_instituicoes" />

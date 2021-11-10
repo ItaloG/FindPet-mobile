@@ -1,5 +1,7 @@
 package com.example.app_findpet.apiFindpet
 
+import com.google.gson.annotations.SerializedName
+
 class Login {
 
     var id: Int = 0
@@ -17,6 +19,7 @@ class Login {
     var cep: String = ""
     var numero: Int = 0
     var complemento: String = ""
+    var tipo_usuario = ""
     var token: String = ""
 
     override fun toString(): String {
@@ -35,6 +38,7 @@ class Login {
                 "cep='$cep', " +
                 "numero='$numero', " +
                 "complemento='$complemento'," +
+                "tipo_usuario='$tipo_usuario', " +
                 "token='$token')"
     }
 
