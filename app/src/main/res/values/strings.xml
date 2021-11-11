@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">App-FindPet</string>
+
+    <string-array name="tipos_estabelecimento">
+        <item>Tipo de estabelecimento</item>
+        <item>ONG</item>
+        <item>CANIL</item>
+        <item>VETERINARIO</item>
+        <item>PETSHOP</item>
+    </string-array>
 </resources>

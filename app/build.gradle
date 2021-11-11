@@ -4,13 +4,21 @@ plugins {
 }
 
 android {
+<<<<<<< HEAD
     compileSdkVersion 30
+=======
+    compileSdkVersion 31
+>>>>>>> feature/integracao
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.example.app_findpet"
         minSdkVersion 26
+<<<<<<< HEAD
         targetSdkVersion 30
+=======
+        targetSdkVersion 31
+>>>>>>> feature/integracao
         versionCode 1
         versionName "1.0"
 
@@ -33,6 +41,13 @@ android {
 }
 
 dependencies {
+
+    // Inputs
+    api 'com.google.android.material:material:1.1.0-alpha05'
+
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.2.0'
