@@ -11,13 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppFindPet">
-<<<<<<< HEAD
-        <activity android:name=".perfil_insti_visaoInstituicao"></activity>
-        <activity android:name=".tela_feed" />
-        <activity android:name=".tela_login" />
-=======
         <activity android:name=".perfilInstituicaoVisaoInstituicaoActivity">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".perfilAnimalActivity" />
         <activity android:name=".campanhasActivity" />
@@ -30,16 +28,11 @@
 
         </activity>
         <activity android:name=".tela_feed" />
->>>>>>> feature/integracao
         <activity android:name=".tela_cadastro_usuarioComum" />
         <activity android:name=".tela_cadastro_instituicoes" />
         <activity android:name=".tela_escolha_cadastro" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data

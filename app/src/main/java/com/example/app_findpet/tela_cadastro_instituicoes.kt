@@ -146,22 +146,22 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
                 val editor = dados.edit()
 
                 editor.putString("nome", instituicao!!.nome)
-                editor.putInt("tipoEstabelecimento", instituicao!!.tipoEstabelecimento)
-                editor.putString("cnpj", instituicao!!.cnpj)
-                editor.putString("email", instituicao!!.email)
-                editor.putString("senha", instituicao!!.senha)
-                editor.putString("telefone", instituicao!!.telefone)
-                editor.putString("celular", instituicao!!.celular)
-                editor.putString("logradouro", instituicao!!.logradouro)
-                editor.putString("cep", instituicao!!.cep)
-                editor.putInt("numero", instituicao!!.numero)
-                editor.putString("complemento", instituicao!!.complemento)
+                editor.putInt("tipoEstabelecimento", instituicao.tipoEstabelecimento)
+                editor.putString("cnpj", instituicao.cnpj)
+                editor.putString("email", instituicao.email)
+                editor.putString("senha", instituicao.senha)
+                editor.putString("telefone", instituicao.telefone)
+                editor.putString("celular", instituicao.celular)
+                editor.putString("logradouro", instituicao.logradouro)
+                editor.putString("cep", instituicao.cep)
+                editor.putInt("numero", instituicao.numero)
+                editor.putString("complemento", instituicao.complemento)
 
                 editor.apply()
 
                 abrirPerfil()
 
-                Log.i("xpto", instituicao!!.toString())
+                Log.i("xpto", instituicao.toString())
             }
 
             override fun onFailure(call: Call<Instituicao>, t: Throwable) {

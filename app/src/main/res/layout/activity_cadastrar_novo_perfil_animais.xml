@@ -70,11 +70,8 @@
                 android:background="@drawable/borda_branca"
                 android:fontFamily="@font/roboto"
                 android:inputType="textPersonName"
-<<<<<<< HEAD
                 android:padding="10dp"/>
-=======
-                android:padding="10dp" />
->>>>>>> feature/integracao
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -92,11 +89,8 @@
                 android:background="@drawable/borda_branca"
                 android:fontFamily="@font/roboto"
                 android:inputType="textPersonName"
-<<<<<<< HEAD
                 android:padding="10dp"/>
-=======
-                android:padding="10dp" />
->>>>>>> feature/integracao
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -114,11 +108,8 @@
                 android:background="@drawable/borda_branca"
                 android:fontFamily="@font/roboto"
                 android:inputType="textPersonName"
-<<<<<<< HEAD
                 android:padding="10dp"/>
-=======
-                android:padding="10dp" />
->>>>>>> feature/integracao
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -136,11 +127,8 @@
                 android:background="@drawable/borda_branca"
                 android:fontFamily="@font/roboto"
                 android:inputType="textPersonName"
-<<<<<<< HEAD
                 android:padding="10dp"/>
-=======
-                android:padding="10dp" />
->>>>>>> feature/integracao
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -159,11 +147,8 @@
                 android:background="@drawable/borda_branca"
                 android:fontFamily="@font/roboto"
                 android:inputType="textPersonName"
-<<<<<<< HEAD
                 android:padding="10dp"/>
-=======
-                android:padding="10dp" />
->>>>>>> feature/integracao
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -177,46 +162,32 @@
             android:inputType="textPersonName"
             android:text="Adicionar"
             android:textColor="@color/white"
-<<<<<<< HEAD
             android:textSize="20sp"/>
-=======
-            android:textSize="20sp" />
->>>>>>> feature/integracao
+
 
         <ImageView
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_gravity="end"
             android:layout_marginTop="30dp"
-<<<<<<< HEAD
             android:src="@drawable/pata"/>
-=======
-            android:src="@drawable/pata" />
->>>>>>> feature/integracao
+
 
         <ImageView
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_gravity="center"
-<<<<<<< HEAD
             android:src="@drawable/pata"
             android:layout_marginTop="-170dp"/>
-=======
-            android:layout_marginTop="-170dp"
-            android:src="@drawable/pata" />
->>>>>>> feature/integracao
+
 
         <ImageView
             android:layout_width="90dp"
             android:layout_height="90dp"
-<<<<<<< HEAD
             android:src="@drawable/pata"
             android:layout_marginTop="-170dp"
             />
-=======
-            android:layout_marginTop="-170dp"
-            android:src="@drawable/pata" />
->>>>>>> feature/integracao
+
 
 
     </LinearLayout>

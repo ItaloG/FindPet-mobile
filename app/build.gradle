@@ -4,21 +4,13 @@ plugins {
 }
 
 android {
-<<<<<<< HEAD
-    compileSdkVersion 30
-=======
     compileSdkVersion 31
->>>>>>> feature/integracao
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.example.app_findpet"
         minSdkVersion 26
-<<<<<<< HEAD
-        targetSdkVersion 30
-=======
         targetSdkVersion 31
->>>>>>> feature/integracao
         versionCode 1
         versionName "1.0"
 

@@ -70,11 +70,8 @@
                 android:background="@drawable/borda_branca"
                 android:fontFamily="@font/roboto"
                 android:inputType="textPersonName"
-<<<<<<< HEAD
                 android:padding="10dp"/>
-=======
-                android:padding="10dp" />
->>>>>>> feature/integracao
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -92,11 +89,8 @@
                 android:background="@drawable/borda_branca"
                 android:fontFamily="@font/roboto"
                 android:inputType="textPersonName"
-<<<<<<< HEAD
                 android:padding="10dp"/>
-=======
-                android:padding="10dp" />
->>>>>>> feature/integracao
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -114,11 +108,8 @@
                 android:background="@drawable/borda_branca"
                 android:fontFamily="@font/roboto"
                 android:inputType="textPersonName"
-<<<<<<< HEAD
                 android:padding="10dp"/>
-=======
-                android:padding="10dp" />
->>>>>>> feature/integracao
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -132,11 +123,8 @@
             android:inputType="textPersonName"
             android:text="Adicionar"
             android:textColor="@color/white"
-<<<<<<< HEAD
             android:textSize="20sp"/>
-=======
-            android:textSize="20sp" />
->>>>>>> feature/integracao
+
 
     </LinearLayout>
 
