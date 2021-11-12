@@ -22,363 +22,382 @@
             android:layout_height="100dp"
             android:background="@color/marrommClarinho" />
 
-        <androidx.cardview.widget.CardView
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="-50dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="15dp"
-            android:elevation="10dp"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="15dp">
+            android:padding="20dp">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:elevation="100dp"
-                android:orientation="vertical"
-                android:padding="20dp">
+                android:layout_height="wrap_content">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:id="@+id/imagem_ong"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginStart="8dp"
-                        android:src="@drawable/ic_baseline_pets_24"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/titulo_ong"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:scaleType="centerCrop"
-                        android:text="Nome da Ong"
-                        android:textColor="@color/marromEscuro"
-                        android:textSize="20sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/imagem_ong"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/txt_avaliacao"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:drawableStart="@drawable/ic_baseline_star_24"
-                        android:gravity="center"
-                        android:text="3.0"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        app:layout_constraintStart_toStartOf="@+id/titulo_ong"
-                        app:layout_constraintTop_toBottomOf="@+id/titulo_ong" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
+                <ImageView
+                    android:id="@+id/imagem_ong"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_baseline_pets_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/tv_contatos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="Contato"
-                    android:textColor="@color/marromEscuro"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:text="Trocar foto"
+                    android:textColor="@color/marromClaro"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imagem_ong"
+                    app:layout_constraintStart_toStartOf="@+id/imagem_ong"
+                    app:layout_constraintTop_toBottomOf="@+id/imagem_ong" />
 
                 <TextView
-                    android:id="@+id/nome_email_instituicao"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/ic_baseline_email_24"
-                    android:drawablePadding="3dp"
-                    android:drawableTint="@color/marrommClarinho"
-                    android:fontFamily="@font/roboto"
-                    android:gravity="center_vertical"
-                    android:text="exampleong@gmail.com"
-                    android:textSize="13sp" />
-
-                <TextView
-                    android:id="@+id/nome_rua_instituicao"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/ic_baseline_location_on_24"
-                    android:drawablePadding="3dp"
-                    android:drawableTint="@color/marrommClarinho"
-                    android:fontFamily="@font/roboto"
-                    android:gravity="center_vertical"
-                    android:text="Rua dos Limões, 78"
-                    android:textSize="13sp" />
-
-                <TextView
-                    android:id="@+id/telefone_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/ic_baseline_phone_in_talk_24"
-                    android:drawablePadding="3dp"
-                    android:drawableTint="@color/marrommClarinho"
-                    android:fontFamily="@font/roboto"
-                    android:gravity="center_vertical"
-                    android:text="(11) 4002-8922"
-                    android:textSize="13sp" />
-
-                <TextView
-                    android:id="@+id/telefone_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/ic_baseline_phone_iphone_24"
-                    android:drawablePadding="3dp"
-                    android:drawableTint="@color/marrommClarinho"
-                    android:fontFamily="@font/roboto"
-                    android:gravity="center_vertical"
-                    android:text="(11) 98464-5989"
-                    android:textSize="13sp" />
-
-                <TextView
-                    android:id="@+id/tv_descricao"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:gravity="center"
-                    android:text="Nossa história"
-                    android:textColor="@color/marromEscuro"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/txt_descricao"
+                    android:id="@+id/titulo_ong"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:text="Lorem ipsum dolor sit amet. Aut amet minus ut quam minus quo consequatur possimus! Sed quia consectetur et odio adipisci aut pariatur earum ut cumque"
+                    android:gravity="center"
+                    android:scaleType="centerCrop"
+                    android:text="Nome da Ong"
                     android:textColor="@color/marromEscuro"
-                    android:textSize="13sp"
-                    android:textStyle="italic" />
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imagem_ong"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/servicos"
+                    android:id="@+id/txt_avaliacao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="left"
+                    android:drawableStart="@drawable/ic_baseline_star_24"
                     android:gravity="center"
-                    android:text="Servicos"
-                    android:textColor="@color/marromEscuro"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:text="3.0"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/titulo_ong"
+                    app:layout_constraintTop_toBottomOf="@+id/titulo_ong" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cv_servico"
-                        android:layout_width="100dp"
-                        android:layout_height="125dp"
-                        android:layout_marginStart="10dp"
-                        app:cardCornerRadius="10dp">
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:paddingBottom="5dp">
+            <TextView
+                android:id="@+id/tv_contatos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:text="Contato"
+                android:textColor="@color/marromEscuro"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                    </androidx.cardview.widget.CardView>
-                </LinearLayout>
+            <TextView
+                android:id="@+id/nome_email_instituicao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_email_24"
+                android:drawablePadding="3dp"
+                android:drawableTint="@color/marrommClarinho"
+                android:fontFamily="@font/roboto"
+                android:gravity="center_vertical"
+                android:text="exampleong@gmail.com"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/nome_rua_instituicao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_location_on_24"
+                android:drawablePadding="3dp"
+                android:drawableTint="@color/marrommClarinho"
+                android:fontFamily="@font/roboto"
+                android:gravity="center_vertical"
+                android:text="Rua dos Limões, 78"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/telefone_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_phone_in_talk_24"
+                android:drawablePadding="3dp"
+                android:drawableTint="@color/marrommClarinho"
+                android:fontFamily="@font/roboto"
+                android:gravity="center_vertical"
+                android:text="(11) 4002-8922"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/telefone_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_phone_iphone_24"
+                android:drawablePadding="3dp"
+                android:drawableTint="@color/marrommClarinho"
+                android:fontFamily="@font/roboto"
+                android:gravity="center_vertical"
+                android:text="(11) 98464-5989"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_descricao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:drawableEnd="@drawable/edit_24"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/marromEscuro"
+                android:gravity="center"
+                android:text="Nossa história"
+                android:textColor="@color/marromEscuro"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_descricao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Lorem ipsum dolor sit amet. Aut amet minus ut quam minus quo consequatur possimus! Sed quia consectetur et odio adipisci aut pariatur earum ut cumque"
+                android:textColor="@color/marromEscuro"
+                android:textSize="13sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/servicos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:drawableEnd="@drawable/ic_baseline_add_24"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/marromEscuro"
+                android:gravity="center"
+                android:text="Servicos"
+                android:textColor="@color/marromEscuro"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/quantidade_animais"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background_servico"
+                    android:drawableEnd="@drawable/close_24"
+                    android:drawableTint="@color/marromEscuro"
                     android:gravity="center"
-                    android:text="Nossos animais"
-                    android:textColor="@color/marromEscuro"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_view_prof"
-                        android:layout_width="100dp"
-                        android:layout_height="125dp"
-                        android:layout_marginStart="10dp"
-                        app:cardCornerRadius="10dp">
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:paddingBottom="5dp">
-
-                            <ImageView
-                                android:id="@+id/add_img3"
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/cachorro"
-                                android:text="Adicionar imagens ou videos"
-                                android:textSize="13sp"
-                                app:layout_constraintBottom_toTopOf="@+id/textView2"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <TextView
-                                android:id="@+id/txt_caracteristicas3"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="5dp"
-                                android:gravity="center"
-                                android:text="5 anos"
-                                android:textSize="13sp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent" />
-
-                            <TextView
-                                android:id="@+id/textView2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Nome"
-                                android:textColor="@color/marrom"
-                                android:textSize="13sp"
-                                android:textStyle="bold"
-                                app:layout_constraintBottom_toTopOf="@+id/txt_caracteristicas3"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.0"
-                                app:layout_constraintStart_toStartOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                    </androidx.cardview.widget.CardView>
-                </LinearLayout>
+                    android:padding="8dp"
+                    android:text="Servico"
+                    android:textColor="@color/marromEscuro" />
 
                 <TextView
-                    android:id="@+id/campanhas_instituicao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center"
-                    android:text="Campanhas"
-                    android:textColor="@color/marromEscuro"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card_add_campanhas"
-                    android:layout_width="match_parent"
-                    android:layout_height="85dp"
-                    app:cardCornerRadius="10dp">
-
-                    <TextView
-                        android:id="@+id/add_img_campanhas"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/cinza"
-                        android:gravity="center"
-                        android:text="sliderShow"
-                        android:textSize="13sp" />
-
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:id="@+id/funcionarios"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center"
-                    android:text="Nosso colaboradores"
-                    android:textColor="@color/marromEscuro"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_view_proFun"
-                        android:layout_width="100dp"
-                        android:layout_height="125dp"
-                        android:layout_marginStart="10dp"
-                        app:cardCornerRadius="10dp">
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:paddingBottom="5dp">
-
-                            <ImageView
-                                android:id="@+id/add_img4"
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/cachorro"
-                                android:text="Adicionar imagens ou videos"
-                                android:textSize="13sp"
-                                app:layout_constraintBottom_toTopOf="@+id/textView3"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.0"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintVertical_bias="0.0" />
-
-                            <TextView
-                                android:id="@+id/txt_caracteristicas4"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="5dp"
-                                android:gravity="center"
-                                android:text="5 anos"
-                                android:textSize="13sp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent" />
-
-                            <TextView
-                                android:id="@+id/textView3"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Nome"
-                                android:textColor="@color/marrom"
-                                android:textSize="13sp"
-                                android:textStyle="bold"
-                                app:layout_constraintBottom_toTopOf="@+id/txt_caracteristicas4"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.0"
-                                app:layout_constraintStart_toStartOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                    </androidx.cardview.widget.CardView>
-                </LinearLayout>
-
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/background_servico"
+                    android:padding="8dp"
+                    android:text="Servico"
+                    android:textColor="@color/marromEscuro" />
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/quantidade_animais"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:drawableEnd="@drawable/ic_baseline_add_24"
+                android:drawablePadding="5dp"
+                android:drawableTint="@color/marromEscuro"
+                android:gravity="center"
+                android:text="Nossos animais"
+                android:textColor="@color/marromEscuro"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view_prof"
+                    android:layout_width="100dp"
+                    android:layout_height="125dp"
+                    android:layout_marginStart="10dp"
+                    app:cardCornerRadius="10dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="5dp">
+
+                        <ImageView
+                            android:id="@+id/add_img3"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/cachorro"
+                            android:text="Adicionar imagens ou videos"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toTopOf="@+id/textView2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_caracteristicas3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:text="5 anos"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Nome"
+                            android:textColor="@color/marrom"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/txt_caracteristicas3"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/campanhas_instituicao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:drawableEnd="@drawable/ic_baseline_add_24"
+                android:drawablePadding="5dp"
+                android:drawableTint="@color/marromEscuro"
+                android:gravity="center"
+                android:text="Campanhas"
+                android:textColor="@color/marromEscuro"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_add_campanhas"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                app:cardCornerRadius="10dp">
+
+                <TextView
+                    android:id="@+id/add_img_campanhas"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/cinza"
+                    android:gravity="center"
+                    android:text="sliderShow"
+                    android:textSize="13sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/funcionarios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:drawableEnd="@drawable/ic_baseline_add_24"
+                android:drawablePadding="5dp"
+                android:drawableTint="@color/marromEscuro"
+                android:gravity="center"
+                android:text="Nosso colaboradores"
+                android:textColor="@color/marromEscuro"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view_proFun"
+                    android:layout_width="100dp"
+                    android:layout_height="125dp"
+                    android:layout_marginStart="10dp"
+                    app:cardCornerRadius="10dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="5dp">
+
+                        <ImageView
+                            android:id="@+id/add_img4"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/cachorro"
+                            android:text="Adicionar imagens ou videos"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toTopOf="@+id/textView3"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <TextView
+                            android:id="@+id/txt_caracteristicas4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:text="5 anos"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Nome"
+                            android:textColor="@color/marrom"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/txt_caracteristicas4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+        </LinearLayout>
 
     </LinearLayout>
 
