@@ -11,11 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppFindPet">
-        <activity android:name=".perfilInstituicaoVisaoInstituicaoActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity
+            android:name=".perfilInstituicaoVisaoInstituicaoActivity"
+            android:parentActivityName=".tela_feed">
+
         </activity>
         <activity android:name=".perfilAnimalActivity" />
         <activity android:name=".campanhasActivity" />
@@ -32,7 +31,10 @@
         <activity android:name=".tela_cadastro_instituicoes" />
         <activity android:name=".tela_escolha_cadastro" />
         <activity android:name=".MainActivity">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <meta-data
