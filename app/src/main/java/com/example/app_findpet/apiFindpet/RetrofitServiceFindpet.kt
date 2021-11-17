@@ -1,8 +1,7 @@
 package com.example.app_findpet.apiFindpet
 
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface RetrofitServiceFindpet {
     @POST("cadastro/instituicao")
@@ -13,4 +12,12 @@ interface RetrofitServiceFindpet {
 
     @POST("login")
     fun login(@Body login: Login): Call<Login>
+
+    @Multipart
+    @PUT("instituicoes/:id/perfil")
+    fun trocarFotoPerfilInstituicao(
+        @Header("Authorization") authorization: String,
+        @Path("id") id: Int,
+        @Body image: Image
+    ): Call<Image>
 }
