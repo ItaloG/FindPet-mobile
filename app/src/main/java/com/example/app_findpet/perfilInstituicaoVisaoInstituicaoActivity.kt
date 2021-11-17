@@ -16,6 +16,7 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
     lateinit var tvEmailInstituicaio: TextView
     lateinit var tvRuaInstituicao: TextView
     lateinit var tvTelefoneInstituicao: TextView
+    lateinit var tvCelularInstituicao: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +27,8 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
         ivPerfilInstituicao = findViewById(R.id.iv_perfil_instituicao)
         tvEmailInstituicaio = findViewById(R.id.tv_email_instituicao)
         tvRuaInstituicao = findViewById(R.id.tv_rua_instituicao)
-        tvTelefoneInstituicao = findViewById(R.id.tv_telefone_intituicao)
+        tvTelefoneInstituicao = findViewById(R.id.tv_telefone_instituicao)
+        tvCelularInstituicao = findViewById(R.id.tv_celular_instituicao)
 
         preencherTelaPerfil()
 
@@ -39,6 +41,7 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
         tvEmailInstituicaio.text = dados.getString("email", "")
         tvRuaInstituicao.text = dados.getString("logradouro", "")
         tvTelefoneInstituicao.text = dados.getString("telefone", "")
+        tvCelularInstituicao.text = dados.getString("celular", "")
         val urlBanner = dados.getString("url_foto_banner", "")
         Glide.with(this).load(urlBanner).into(ivBannerInstituicao)
         val urlPerfil = dados.getString("url_foto_perfil", "")

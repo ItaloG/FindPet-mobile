@@ -70,13 +70,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginStart="24dp"
                     android:gravity="center"
                     android:scaleType="centerCrop"
                     android:text="Nome da Ong"
                     android:textColor="@color/marromEscuro"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/cardView"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -132,7 +132,7 @@
                 android:textSize="13sp" />
 
             <TextView
-                android:id="@+id/tv_telefone_intituicao"
+                android:id="@+id/tv_telefone_instituicao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ic_baseline_phone_in_talk_24"
@@ -144,7 +144,7 @@
                 android:textSize="13sp" />
 
             <TextView
-                android:id="@+id/telefone_2"
+                android:id="@+id/tv_celular_instituicao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ic_baseline_phone_iphone_24"
