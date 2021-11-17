@@ -12,25 +12,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppFindPet">
         <activity
-            android:name=".perfilInstituicaoVisaoInstituicaoActivity"
+            android:name=".ui.perfilInstituicaoVisaoInstituicaoActivity"
             android:parentActivityName=".tela_feed">
 
         </activity>
-        <activity android:name=".perfilAnimalActivity" />
-        <activity android:name=".campanhasActivity" />
-        <activity android:name=".perfilInstituicaoActivity" />
-        <activity android:name=".esqueciSenhaEtapa3Activity" />
-        <activity android:name=".esqueciSenhaEtapa2Activity" />
-        <activity android:name=".esqueciSenhaEtapa1Activity" />
-        <activity android:name=".editarPerfilUsuarioActivity" />
-        <activity android:name=".editarPerfilInstituicaoActivity">
+        <activity android:name=".ui.perfilAnimalActivity" />
+        <activity android:name=".ui.campanhasActivity" />
+        <activity android:name=".ui.perfilInstituicaoActivity" />
+        <activity android:name=".ui.esqueciSenhaEtapa3Activity" />
+        <activity android:name=".ui.esqueciSenhaEtapa2Activity" />
+        <activity android:name=".ui.esqueciSenhaEtapa1Activity" />
+        <activity android:name=".ui.editarPerfilUsuarioActivity" />
+        <activity android:name=".ui.editarPerfilInstituicaoActivity">
 
         </activity>
         <activity android:name=".tela_feed" />
-        <activity android:name=".tela_cadastro_usuarioComum" />
+        <activity android:name=".ui.tela_cadastro_usuarioComum" />
         <activity android:name=".tela_cadastro_instituicoes" />
         <activity android:name=".tela_escolha_cadastro" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

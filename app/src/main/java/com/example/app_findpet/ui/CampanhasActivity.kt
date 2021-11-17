@@ -1,11 +1,12 @@
-package com.example.app_findpet
+package com.example.app_findpet.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.app_findpet.R
 
-class cadastrar_novo_perfilFuncionario : AppCompatActivity() {
+class campanhasActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_cadastrar_novo_perfil_funcionario)
+        setContentView(R.layout.activity_campanhas)
     }
 }

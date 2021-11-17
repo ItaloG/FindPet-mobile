@@ -1,4 +1,4 @@
-package com.example.app_findpet
+package com.example.app_findpet.ui
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
-import com.example.app_findpet.utils.converterUrlParaBitmap
+import com.example.app_findpet.R
 
 class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
 

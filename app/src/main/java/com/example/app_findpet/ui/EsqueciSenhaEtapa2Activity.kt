@@ -1,7 +1,8 @@
-package com.example.app_findpet
+package com.example.app_findpet.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.app_findpet.R
 
 class esqueciSenhaEtapa2Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

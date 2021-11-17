@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".tela_cadastro_usuarioComum">
+    tools:context=".ui.tela_cadastro_usuarioComum">
 
     <LinearLayout
         android:layout_width="match_parent"

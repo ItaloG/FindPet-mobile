@@ -2,17 +2,15 @@ package com.example.app_findpet
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.*
 import com.example.app_findpet.apiFindpet.Instituicao
 import com.example.app_findpet.apiFindpet.RetrofitFactoryFindpet
 import com.example.app_findpet.apiViacep.Cep
 import com.example.app_findpet.apiViacep.RetrofitFactoryViacep
+import com.example.app_findpet.ui.perfilInstituicaoVisaoInstituicaoActivity
 import com.example.app_findpet.utils.MaskFormatUtil
 import retrofit2.Call
 import retrofit2.Callback

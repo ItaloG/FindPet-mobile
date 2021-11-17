@@ -1,4 +1,4 @@
-package com.example.app_findpet
+package com.example.app_findpet.ui
 
 
 import android.content.Context
@@ -8,11 +8,12 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Spinner
+import com.example.app_findpet.R
 import com.example.app_findpet.apiFindpet.RetrofitFactoryFindpet
 import com.example.app_findpet.apiFindpet.Usuario
 import com.example.app_findpet.apiViacep.Cep
 import com.example.app_findpet.apiViacep.RetrofitFactoryViacep
+import com.example.app_findpet.tela_feed
 import com.example.app_findpet.utils.MaskFormatUtil
 import retrofit2.Call
 import retrofit2.Callback
