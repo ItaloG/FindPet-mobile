@@ -4,17 +4,22 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import retrofit2.Call
-import retrofit2.Callback
 import com.example.app_findpet.apiFindpet.Image
 import com.example.app_findpet.apiFindpet.RetrofitFactoryFindpet
+import com.example.app_findpet.utils.converterBitmapParaBitArray
+import okhttp3.MediaType
+import okhttp3.RequestBody
+import retrofit2.Call
+import retrofit2.Callback
 import retrofit2.Response
+import java.io.File
+
 
 const val CODE_IMAGE = 100
 
@@ -82,13 +87,15 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
     }
 
     private fun trocarFotoPerfil() {
-        var image = Image()
-
-        image.image = imageBitMap
-
         val dados = getSharedPreferences("dados_usuario", Context.MODE_PRIVATE)
         val token = dados.getString("token", "")
         val id = dados.getInt("id", 0)
+
+        val image: RequestBody = RequestBody.create(
+            MediaType.parse("image"),
+            converterBitmapParaBitArray(imageBitMap)
+        )
+
         val remote = RetrofitFactoryFindpet().retrofitServiceFindpet()
         val call: Call<Image> = remote.trocarFotoPerfilInstituicao("Bearer $token", id, image)
 
@@ -117,10 +124,9 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
             imageBitMap = BitmapFactory.decodeStream(stream)
 
             // Colocar a imgaem no ImageView
-            ivPerfilInstituicao.setImageBitmap(imageBitMap)
+//            ivPerfilInstituicao.setImageBitmap(imageBitMap)
 
             trocarFotoPerfil()
-
         }
     }
 }

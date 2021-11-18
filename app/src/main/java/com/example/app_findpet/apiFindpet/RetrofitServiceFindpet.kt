@@ -1,5 +1,6 @@
 package com.example.app_findpet.apiFindpet
 
+import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -14,10 +15,10 @@ interface RetrofitServiceFindpet {
     fun login(@Body login: Login): Call<Login>
 
     @Multipart
-    @PUT("instituicoes/:id/perfil")
+    @PUT("instituicoes/{id}/perfil")
     fun trocarFotoPerfilInstituicao(
         @Header("Authorization") authorization: String,
         @Path("id") id: Int,
-        @Body image: Image
+        @Part("image") image: RequestBody
     ): Call<Image>
 }

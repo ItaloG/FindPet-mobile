@@ -4,11 +4,10 @@ import android.graphics.Bitmap
 
 class Image {
 
-    var image: Bitmap? = null
-    var url: String = ""
+    var image: String = ""
 
     override fun toString(): String {
-        return "url = $url"
+        return "url = $image"
     }
 
 }
