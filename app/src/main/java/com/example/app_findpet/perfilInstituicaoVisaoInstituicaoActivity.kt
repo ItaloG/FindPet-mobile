@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.example.app_findpet.apiFindpet.Image
 import com.example.app_findpet.apiFindpet.RetrofitFactoryFindpet
+import com.example.app_findpet.utils.converterBitmapParaBase64
 import com.example.app_findpet.utils.converterBitmapParaBitArray
 import okhttp3.MediaType
 import okhttp3.RequestBody
@@ -35,6 +36,7 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
     lateinit var tvTelefoneInstituicao: TextView
     lateinit var tvCelularInstituicao: TextView
     lateinit var tvTrocarFoto: TextView
+    lateinit var tvDescricao: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,6 +50,7 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
         tvTelefoneInstituicao = findViewById(R.id.tv_telefone_instituicao)
         tvCelularInstituicao = findViewById(R.id.tv_celular_instituicao)
         tvTrocarFoto = findViewById(R.id.tv_trocar_foto_instituicao)
+        tvDescricao = findViewById(R.id.tv_descricao)
 
         tvTrocarFoto.setOnClickListener {
             abrirGaleria()
@@ -86,31 +89,31 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
         )
     }
 
-    private fun trocarFotoPerfil() {
-        val dados = getSharedPreferences("dados_usuario", Context.MODE_PRIVATE)
-        val token = dados.getString("token", "")
-        val id = dados.getInt("id", 0)
-
-        val image: RequestBody = RequestBody.create(
-            MediaType.parse("image"),
-            converterBitmapParaBitArray(imageBitMap)
-        )
-
-        val remote = RetrofitFactoryFindpet().retrofitServiceFindpet()
-        val call: Call<Image> = remote.trocarFotoPerfilInstituicao("Bearer $token", id, image)
-
-        call.enqueue(object : Callback<Image> {
-            override fun onResponse(call: Call<Image>, response: Response<Image>) {
-                val imagem = response.body()
-                Log.i("xpto", imagem.toString())
-            }
-
-            override fun onFailure(call: Call<Image>, t: Throwable) {
-                Log.i("xpto", t.message.toString())
-            }
-
-        })
-    }
+//    private fun trocarFotoPerfil() {
+//        val dados = getSharedPreferences("dados_usuario", Context.MODE_PRIVATE)
+//        val token = dados.getString("token", "")
+//        val id = dados.getInt("id", 0)
+//
+//        val image: RequestBody = RequestBody.create(
+//            MediaType.parse("image"),
+//            converterBitmapParaBitArray(imageBitMap)
+//        )
+//
+//        val remote = RetrofitFactoryFindpet().retrofitServiceFindpet()
+//        val call: Call<Image> = remote.trocarFotoPerfilInstituicao("Bearer $token", id, image)
+//
+//        call.enqueue(object : Callback<Image> {
+//            override fun onResponse(call: Call<Image>, response: Response<Image>) {
+//                val imagem = response.body()
+//                Log.i("xpto", imagem.toString())
+//            }
+//
+//            override fun onFailure(call: Call<Image>, t: Throwable) {
+//                Log.i("xpto", t.message.toString())
+//            }
+//
+//        })
+//    }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -124,9 +127,11 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
             imageBitMap = BitmapFactory.decodeStream(stream)
 
             // Colocar a imgaem no ImageView
-//            ivPerfilInstituicao.setImageBitmap(imageBitMap)
+            ivPerfilInstituicao.setImageBitmap(imageBitMap)
 
-            trocarFotoPerfil()
+            Log.i("xpto", converterBitmapParaBase64(imageBitMap!!))
+
+//            trocarFotoPerfil()
         }
     }
 }

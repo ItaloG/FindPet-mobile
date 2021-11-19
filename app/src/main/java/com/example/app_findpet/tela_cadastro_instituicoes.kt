@@ -156,6 +156,7 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
                 editor.putString("cep", instituicao.cep)
                 editor.putInt("numero", instituicao.numero)
                 editor.putString("complemento", instituicao.complemento)
+                editor.putString("token", instituicao.token)
 
                 editor.apply()
 
