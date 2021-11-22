@@ -48,8 +48,8 @@
                         android:id="@+id/iv_perfil_instituicao"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:scaleType="centerCrop"
-                        android:background="@drawable/pata" />
+                        android:background="@drawable/pata"
+                        android:scaleType="centerCrop" />
                 </androidx.cardview.widget.CardView>
 
                 <TextView

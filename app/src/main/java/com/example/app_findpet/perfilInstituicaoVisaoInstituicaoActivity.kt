@@ -6,8 +6,10 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.example.app_findpet.apiFindpet.Image
@@ -52,12 +54,15 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
         tvTrocarFoto = findViewById(R.id.tv_trocar_foto_instituicao)
         tvDescricao = findViewById(R.id.tv_descricao)
 
+        preencherTelaPerfil()
+
         tvTrocarFoto.setOnClickListener {
             abrirGaleria()
         }
 
-        preencherTelaPerfil()
+        tvDescricao.setOnClickListener {
 
+        }
     }
 
     private fun preencherTelaPerfil() {
@@ -88,6 +93,7 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
             CODE_IMAGE
         )
     }
+
 
 //    private fun trocarFotoPerfil() {
 //        val dados = getSharedPreferences("dados_usuario", Context.MODE_PRIVATE)
