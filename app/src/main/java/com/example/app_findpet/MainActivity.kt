@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         buttonCadastrar.setOnClickListener {
             val intent = Intent(this, tela_escolha_cadastro::class.java)
             startActivity(intent)
+
         }
 
         buttonEnviarEsqueciSenha.setOnClickListener {
@@ -67,7 +68,7 @@ class MainActivity : AppCompatActivity() {
         call.enqueue(object : Callback<Login> {
             override fun onResponse(call: Call<Login>, response: Response<Login>) {
                 val usuario = response.body()
-
+                Log.i("xpto", usuario.toString())
                 val dados = getSharedPreferences("dados_usuario", Context.MODE_PRIVATE)
                 val editor = dados.edit()
 
@@ -87,13 +88,13 @@ class MainActivity : AppCompatActivity() {
                 editor.putInt("numero", usuario.numero)
                 editor.putString("complemento", usuario.complemento)
                 editor.putString("tipo_usuario", usuario.tipo_usuario)
+                editor.putString("descricao", usuario.descricao!!)
                 editor.putString("token", usuario.token)
 
                 editor.apply()
 
                 abrirFeed()
 
-                Log.i("xpto", usuario.toString())
             }
 
             override fun onFailure(call: Call<Login>, t: Throwable) {

@@ -13,7 +13,7 @@
         android:theme="@style/Theme.AppFindPet">
         <activity
             android:name=".perfilInstituicaoVisaoInstituicaoActivity"
-            android:parentActivityName=".tela_feed"></activity>
+            android:parentActivityName=".tela_feed" />
         <activity android:name=".perfilAnimalActivity" />
         <activity android:name=".campanhasActivity" />
         <activity android:name=".perfilInstituicaoActivity" />
@@ -26,10 +26,10 @@
         <activity
             android:name=".esqueciSenhaEtapa1Activity"
             android:parentActivityName=".MainActivity">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
         </activity>
         <activity android:name=".editarPerfilUsuarioActivity" />
         <activity android:name=".editarPerfilInstituicaoActivity" />
@@ -38,10 +38,10 @@
         <activity android:name=".tela_cadastro_instituicoes" />
         <activity android:name=".tela_escolha_cadastro" />
         <activity android:name=".MainActivity">
-                        <intent-filter>
-                            <action android:name="android.intent.action.MAIN" />
-                            <category android:name="android.intent.category.LAUNCHER" />
-                        </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <meta-data

@@ -117,10 +117,11 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
     private fun abrirPerfil() {
         val intent = Intent(this, perfilInstituicaoVisaoInstituicaoActivity::class.java)
         startActivity(intent)
+
     }
 
-    private  fun criarInstituicao() {
-        var instituicao =  Instituicao()
+    private fun criarInstituicao() {
+        var instituicao = Instituicao()
 
         instituicao.nome = editTextNome.text.toString()
         instituicao.tipoEstabelecimento = spinnerTipoEstabelecimento.selectedItemPosition
@@ -156,13 +157,12 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
                 editor.putString("cep", instituicao.cep)
                 editor.putInt("numero", instituicao.numero)
                 editor.putString("complemento", instituicao.complemento)
+                editor.putString("descricao", instituicao.descricao)
                 editor.putString("token", instituicao.token)
 
                 editor.apply()
 
                 abrirPerfil()
-
-                Log.i("xpto", instituicao.toString())
             }
 
             override fun onFailure(call: Call<Instituicao>, t: Throwable) {
