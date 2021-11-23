@@ -338,7 +338,7 @@
                 android:drawablePadding="5dp"
                 android:drawableTint="@color/marromEscuro"
                 android:gravity="center"
-                android:text="Nosso colaboradores"
+                android:text="Nossos colaboradores"
                 android:textColor="@color/marromEscuro"
                 android:textSize="18sp"
                 android:textStyle="bold" />

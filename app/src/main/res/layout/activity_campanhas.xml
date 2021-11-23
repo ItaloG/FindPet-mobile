@@ -18,6 +18,7 @@
             android:padding="20dp">
 
             <ImageView
+                android:id="@+id/foto_campanha"
                 android:layout_width="match_parent"
                 android:layout_height="230dp"
                 android:layout_marginTop="10dp"
@@ -31,6 +32,7 @@
                 android:orientation="vertical">
 
                 <Button
+                    android:id="@+id/botao_add_banner"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="120dp"
@@ -173,8 +175,19 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
+            <Button
+                android:id="@+id/btn_entrar"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="105dp"
+                android:layout_marginTop="650dp"
+                android:background="@drawable/borda_marrom"
+                android:fontFamily="@font/roboto"
+                android:inputType="textPersonName"
+                android:text="Salvar"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
         </RelativeLayout>
-
     </FrameLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
@@ -28,8 +29,12 @@ const val CODE_IMAGE = 100
 
 class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
 
+
     var imageBitMap: Bitmap? = null
 
+    lateinit var buttonAdicionarColaborador: TextView
+    lateinit var buttonAdicionarNovoAnimal: TextView
+    lateinit var buttonAdicionarCampanhas: TextView
     lateinit var ivBannerInstituicao: ImageView
     lateinit var ivPerfilInstituicao: ImageView
     lateinit var tvNomeInstituicao: TextView
@@ -44,6 +49,9 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_perfil_instituicao_visao_instituicao)
 
+        buttonAdicionarColaborador = findViewById(R.id.funcionarios)
+        buttonAdicionarNovoAnimal = findViewById(R.id.quantidade_animais)
+        buttonAdicionarCampanhas = findViewById(R.id.campanhas_instituicao)
         tvNomeInstituicao = findViewById(R.id.tv_nome_instituicao)
         ivBannerInstituicao = findViewById(R.id.iv_banner_instituicao)
         ivPerfilInstituicao = findViewById(R.id.iv_perfil_instituicao)
@@ -62,6 +70,21 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
 
         tvDescricao.setOnClickListener {
 
+        }
+
+        buttonAdicionarCampanhas.setOnClickListener {
+            val intent = Intent(this, campanhasActivity::class.java)
+            startActivity(intent)
+        }
+
+        buttonAdicionarNovoAnimal.setOnClickListener {
+            val intent = Intent(this, cadastrar_novo_perfilAnimais::class.java)
+            startActivity(intent)
+        }
+
+        buttonAdicionarColaborador.setOnClickListener {
+            val intent = Intent(this, cadastrar_novo_perfilFuncionario::class.java)
+            startActivity(intent)
         }
     }
 
