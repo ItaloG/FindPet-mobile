@@ -13,6 +13,7 @@
         android:theme="@style/Theme.AppFindPet">
         <activity
             android:name=".perfilInstituicaoVisaoInstituicaoActivity"
+
             android:parentActivityName=".tela_feed">
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
@@ -36,19 +37,15 @@
 
         <activity
             android:name=".esqueciSenhaEtapa1Activity"
-            android:parentActivityName=".MainActivity">
-<!--                        <intent-filter>-->
-<!--                            <action android:name="android.intent.action.MAIN" />-->
-<!--                            <category android:name="android.intent.category.LAUNCHER" />-->
-<!--                        </intent-filter>-->
-        </activity>
-        <activity android:name=".editarPerfilUsuarioActivity" />
+            android:parentActivityName=".MainActivity"></activity>
+
 
         <activity android:name=".editarPerfilInstituicaoActivity">
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
 <!--            </intent-filter>-->
+
         </activity>
         <activity android:name=".cadastrar_novo_perfilAnimais"
             android:parentActivityName=".perfilInstituicaoVisaoInstituicaoActivity" >

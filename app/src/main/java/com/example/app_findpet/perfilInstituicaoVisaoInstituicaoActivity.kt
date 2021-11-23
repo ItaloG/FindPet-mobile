@@ -8,21 +8,19 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import com.example.app_findpet.apiFindpet.Image
+import com.example.app_findpet.apiFindpet.Descricao
 import com.example.app_findpet.apiFindpet.RetrofitFactoryFindpet
 import com.example.app_findpet.utils.converterBitmapParaBase64
-import com.example.app_findpet.utils.converterBitmapParaBitArray
-import okhttp3.MediaType
-import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.io.File
 
 
 const val CODE_IMAGE = 100
@@ -43,6 +41,7 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
     lateinit var tvTelefoneInstituicao: TextView
     lateinit var tvCelularInstituicao: TextView
     lateinit var tvTrocarFoto: TextView
+    lateinit var tvNovaDescricao: TextView
     lateinit var tvDescricao: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -60,6 +59,7 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
         tvTelefoneInstituicao = findViewById(R.id.tv_telefone_instituicao)
         tvCelularInstituicao = findViewById(R.id.tv_celular_instituicao)
         tvTrocarFoto = findViewById(R.id.tv_trocar_foto_instituicao)
+        tvNovaDescricao = findViewById(R.id.tv_nova_descricao)
         tvDescricao = findViewById(R.id.tv_descricao)
 
         preencherTelaPerfil()
@@ -68,8 +68,8 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
             abrirGaleria()
         }
 
-        tvDescricao.setOnClickListener {
-
+        tvNovaDescricao.setOnClickListener {
+            abrirDialogDescricao()
         }
 
         buttonAdicionarCampanhas.setOnClickListener {
@@ -96,6 +96,7 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
         tvRuaInstituicao.text = dados.getString("logradouro", "")
         tvTelefoneInstituicao.text = dados.getString("telefone", "")
         tvCelularInstituicao.text = dados.getString("celular", "")
+        tvDescricao.text = dados.getString("descricao", "")
         val urlBanner = dados.getString("url_foto_banner", "")
         Glide.with(this).load(urlBanner).into(ivBannerInstituicao)
         val urlPerfil = dados.getString("url_foto_perfil", "")
@@ -115,6 +116,56 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
             ),
             CODE_IMAGE
         )
+    }
+
+
+    private fun abrirDialogDescricao() {
+        val view = View.inflate(this, com.example.app_findpet.R.layout.dialog_descricao, null)
+
+        val biulder = AlertDialog.Builder(this)
+        biulder.setView(view)
+        val alerta = biulder.create()
+
+        val etDescricao = view.findViewById<EditText>(R.id.et_descricao)
+        etDescricao.setText(tvDescricao.text)
+
+        view.findViewById<View>(com.example.app_findpet.R.id.iv_close_descricao)
+            .setOnClickListener {
+                alerta.dismiss()
+            }
+
+        view.findViewById<View>(R.id.btn_submit_descricao).setOnClickListener {
+            val dados = getSharedPreferences("dados_usuario", Context.MODE_PRIVATE)
+            val token = dados.getString("token", "")
+            val id = dados.getInt("id", 0)
+
+            var descricao = Descricao()
+
+            descricao.descricao = etDescricao.text.toString()
+
+            val remote = RetrofitFactoryFindpet().retrofitServiceFindpet()
+            val call: Call<Descricao> =
+                remote.enviarDescricao("Bearer $token", id, descricao)
+
+            call.enqueue(object : Callback<Descricao> {
+                override fun onResponse(call: Call<Descricao>, response: Response<Descricao>) {
+                    val descricao = response.body()
+
+                    tvDescricao.text = descricao!!.descricao
+
+                    alerta.dismiss()
+                }
+
+                override fun onFailure(call: Call<Descricao>, t: Throwable) {
+                    Log.i("xpto", t.message.toString())
+                }
+
+
+            })
+        }
+
+
+        alerta.show()
     }
 
 

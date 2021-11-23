@@ -21,4 +21,11 @@ interface RetrofitServiceFindpet {
         @Path("id") id: Int,
         @Part("image") image: RequestBody
     ): Call<Image>
+
+    @PUT("instituicoes/{id}/descricao")
+    fun enviarDescricao(
+        @Header("Authorization") authorization: String,
+        @Path("id") id: Int,
+        @Body descricao: Descricao
+    ): Call<Descricao>
 }
