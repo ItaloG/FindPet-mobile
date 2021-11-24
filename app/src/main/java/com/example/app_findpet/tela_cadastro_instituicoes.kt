@@ -81,6 +81,8 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
         editTextCep.setOnFocusChangeListener { v, hasFocus ->
             val cep = MaskFormatUtil.unmask(editTextCep.text.toString())
 
+            val value = v
+
             if (!hasFocus && cep.length == 8) {
                 buscarEndereco(cep)
             }

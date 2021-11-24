@@ -7,33 +7,33 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.example.app_findpet.ui.perfilInstituicaoVisaoInstituicaoActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class tela_feed : AppCompatActivity() {
+    lateinit var navController : NavController
+    lateinit var bot_navigation : BottomNavigationView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_feed)
 
         supportActionBar!!.title = ""
+
+        bot_navigation = findViewById(R.id.bot_navigation)
+        navController = findNavController(R.id.hostFragment)
+        bot_navigation.setupWithNavController(navController)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.menu_teste, menu)
+        inflater.inflate(R.menu.bottom_menu, menu)
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        when (item.itemId) {
-            R.id.menu_perfil -> {
-                abrirPerfil()
-                return true
-            }
-        }
-
-        return super.onOptionsItemSelected(item)
-    }
 
     private fun abrirPerfil() {
         val dados = getSharedPreferences("dados_usuario", Context.MODE_PRIVATE)
@@ -50,4 +50,6 @@ class tela_feed : AppCompatActivity() {
             finish()
         }
     }
+
+
 }

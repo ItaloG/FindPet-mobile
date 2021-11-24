@@ -3,11 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/bottom_nav"
-    app:startDestination="@id/tela_feed">
-
-    <activity
-        android:id="@+id/tela_feed"
-        android:name="com.example.app_findpet.tela_feed"
-        android:label="activity_tela_feed"
-        tools:layout="@layout/activity_tela_feed" />
+    app:startDestination="@id/feedFragment">
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="com.example.app_findpet.FeedFragment"
+        android:label="FeedFragment" />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.app_findpet.FavoriteFragment"
+        android:label="FavoriteFragment" />
+    <fragment
+        android:id="@+id/mapaFragment"
+        android:name="com.example.app_findpet.MapaFragment"
+        android:label="MapaFragment" />
+    <fragment
+        android:id="@+id/animalPerdidoFragment"
+        android:name="com.example.app_findpet.AnimalPerdidoFragment"
+        android:label="AnimalPerdidoFragment" />
+    <fragment
+        android:id="@+id/sejaMembroFragment"
+        android:name="com.example.app_findpet.SejaMembroFragment"
+        android:label="SejaMembroFragment" />
 </navigation>
