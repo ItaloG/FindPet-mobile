@@ -9,7 +9,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/marromClaro"
+        android:background="@color/bege"
         android:orientation="horizontal"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
@@ -22,7 +22,7 @@
             android:fontFamily="@font/roboto"
             android:text="Esqueci minha senha"
             android:textSize="30sp"
-            android:textStyle="bold"></TextView>
+            android:textStyle="bold"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -33,7 +33,7 @@
             android:gravity="center"
             android:text="Insira o código enviado para"
             android:textSize="20sp"
-            android:textStyle="bold"></TextView>
+            android:textStyle="bold"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -43,9 +43,9 @@
             android:fontFamily="@font/roboto"
             android:gravity="center"
             android:text="fulano@gmail.com"
-            android:textColor="@color/marrom"
+            android:textColor="@color/laranja"
             android:textSize="17sp"
-            android:textStyle="bold"></TextView>
+            android:textStyle="bold"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="wrap_content"
@@ -60,7 +60,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="230dp"
                 android:layout_marginBottom="300dp"
-                android:background="@drawable/contorno_marrom"
+                android:background="@drawable/contorno_claro"
                 android:fontFamily="@font/roboto"
                 android:inputType="number"
                 android:padding="10dp" />
@@ -79,7 +79,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="80dp"
                 android:layout_marginBottom="300dp"
-                android:background="@drawable/contorno_marrom"
+                android:background="@drawable/contorno_claro"
                 android:fontFamily="@font/roboto"
                 android:inputType="number"
                 android:padding="10dp" />
@@ -98,10 +98,10 @@
                 android:layout_marginStart="220dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="300dp"
-                android:background="@drawable/contorno_marrom"
+                android:background="@drawable/contorno_claro"
                 android:fontFamily="@font/roboto"
                 android:inputType="number"
-                android:padding="10dp" />
+                android:padding="10dp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -117,10 +117,10 @@
                 android:layout_marginStart="70dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="300dp"
-                android:background="@drawable/contorno_marrom"
+                android:background="@drawable/contorno_claro"
                 android:fontFamily="@font/roboto"
                 android:inputType="number"
-                android:padding="10dp" />
+                android:padding="10dp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -129,7 +129,7 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_marginBottom="60dp"
-            android:background="@drawable/borda_marrom"
+            android:background="@drawable/borda_marrom_escuro"
             android:inputType="textPersonName"
             android:text="Continuar"
             android:textColor="@color/white"
@@ -148,8 +148,5 @@
             android:textColor="@color/blue"
             android:textSize="17sp"
             android:textStyle="bold"></TextView>
-
-
     </FrameLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

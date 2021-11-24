@@ -9,7 +9,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/marrommClarinho"
+        android:background="@color/bege"
         android:orientation="horizontal"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
@@ -56,7 +56,7 @@
             android:layout_width="150dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
-            android:background="@drawable/borda_marrom"
+            android:background="@drawable/borda_marrom_escuro"
             android:inputType="textPersonName"
             android:text="Enviar"
             android:textColor="@color/white"

@@ -7,8 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="marrom">#C98822</color>
-    <color name="marromClaro">#EEBB5B</color>
+    <color name="laranjaEscuro">#C98822</color>
+    <color name="laranjaMedio">#EEBB5B</color>
     <color name="marromEscuro">#654D41</color>
     <color name="marrommClarinho">#CCA583</color>
     <color name="blue">#147AD6</color>
@@ -18,4 +18,6 @@
     <color name="cinza_claro">#E6E6E6</color>
     <color name="bege">#80D4C6A9</color>
     <color name="amarelo">#FFC107</color>
+    <color name="fundo_claro">#C3AC95</color>
+
 </resources>

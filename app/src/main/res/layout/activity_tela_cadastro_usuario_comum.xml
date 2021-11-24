@@ -26,6 +26,7 @@
                 android:inputType="textPersonName" />
 
             <EditText
+                android:id="@+id/et_cpf_usuario"
                 android:layout_width="match_parent"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
@@ -131,7 +132,7 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            android:background="@drawable/borda_laranja"
+            android:background="@drawable/borda_marrom"
             android:inputType="textPersonName"
             android:text="Cadastrar"
             android:textColor="@color/white"

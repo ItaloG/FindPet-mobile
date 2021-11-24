@@ -15,16 +15,21 @@
             android:name=".perfilInstituicaoVisaoInstituicaoActivity"
 
             android:parentActivityName=".tela_feed">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <activity android:name=".perfilAnimalActivity" />
 
         <activity android:name=".campanhasActivity"
-            android:parentActivityName=".perfilInstituicaoVisaoInstituicaoActivity"/>
+            android:parentActivityName=".perfilInstituicaoVisaoInstituicaoActivity">
+<!--                        <intent-filter>-->
+<!--                            <action android:name="android.intent.action.MAIN" />-->
+<!--                            <category android:name="android.intent.category.LAUNCHER" />-->
+<!--                        </intent-filter>-->
+        </activity>
         <activity android:name=".perfilInstituicaoActivity" />
 
         <activity
@@ -55,7 +60,12 @@
 <!--            </intent-filter>-->
         </activity>
         <activity android:name=".cadastrar_novo_perfilFuncionario"
-            android:parentActivityName=".perfilInstituicaoVisaoInstituicaoActivity"/>
+            android:parentActivityName=".perfilInstituicaoVisaoInstituicaoActivity">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
 
         <activity android:name=".tela_feed" />
 
@@ -73,10 +83,10 @@
         <activity android:name=".tela_escolha_cadastro" />
 
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
 
         <meta-data
