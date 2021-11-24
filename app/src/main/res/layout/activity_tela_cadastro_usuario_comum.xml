@@ -14,184 +14,115 @@
         android:orientation="vertical"
         android:padding="12dp">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/cadastro_usuario"
-            android:paddingTop="10dp">
-
             <EditText
                 android:id="@+id/et_nome_usuario"
                 android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:layout_marginTop="50dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:hint="Nome"
                 android:inputType="textPersonName" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/cadastro_usuario"
-            android:paddingTop="10dp">
 
             <EditText
-                android:id="@+id/et_cpf_usuario"
                 android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:fontFamily="@font/roboto"
                 android:hint="CPF"
                 android:inputType="number" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/cadastro_usuario"
-            android:paddingTop="10dp">
 
             <EditText
                 android:id="@+id/et_email_usuario"
                 android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:fontFamily="@font/roboto"
                 android:hint="E-mail"
                 android:inputType="textEmailAddress" />
-        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/cadastro_usuario"
-            android:paddingTop="10dp">
 
             <EditText
                 android:id="@+id/et_senha_usuario"
                 android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:textSize="20sp"
                 android:fontFamily="@font/roboto"
                 android:hint="Senha"
                 android:inputType="textPassword" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/cadastro_usuario"
-            android:paddingTop="10dp">
 
             <EditText
                 android:id="@+id/et_telefone_usuario"
                 android:layout_width="match_parent"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:fontFamily="@font/roboto"
                 android:hint="Telefone"
                 android:inputType="number" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/cadastro_usuario"
-            android:paddingTop="10dp">
 
             <EditText
                 android:id="@+id/et_celular_usuario"
                 android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:fontFamily="@font/roboto"
                 android:hint="Celular"
                 android:inputType="number" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/cadastro_usuario"
-            android:paddingTop="10dp">
 
             <EditText
                 android:id="@+id/et_cep_usuario"
                 android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:fontFamily="@font/roboto"
                 android:hint="CEP"
                 android:inputType="number" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/cadastro_usuario"
-            android:paddingTop="10dp">
 
             <EditText
                 android:id="@+id/et_endereco_usuario"
                 android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:enabled="false"
                 android:fontFamily="@font/roboto"
                 android:hint="Rua/Avenida"
                 android:inputType="textPersonName" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/cadastro_usuario"
-            android:paddingTop="10dp">
 
             <EditText
                 android:id="@+id/et_numero_usuario"
                 android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:hint="Número"
                 android:inputType="number" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/cadastro_usuario"
-            android:paddingTop="10dp">
 
             <EditText
                 android:id="@+id/et_comlemento_usuario"
                 android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:hint="Comlemento"
                 android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
 
 
         <Button

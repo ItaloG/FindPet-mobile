@@ -30,6 +30,7 @@ class tela_cadastro_usuarioComum : AppCompatActivity() {
     lateinit var editTextNumero: EditText
     lateinit var editTextComplemento: EditText
     lateinit var buttonCadastrar: Button
+    lateinit var buttonCadastroUsuario: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +38,7 @@ class tela_cadastro_usuarioComum : AppCompatActivity() {
 
         supportActionBar!!.title = "Cadastro"
 
+        buttonCadastroUsuario = findViewById(R.id.botao_cadastroUsu)
         editTextNome = findViewById(R.id.et_nome_usuario)
         editTextCpf = findViewById(R.id.et_cpf_usuario)
         editTextEmail = findViewById(R.id.et_email_usuario)
@@ -87,6 +89,11 @@ class tela_cadastro_usuarioComum : AppCompatActivity() {
 
         buttonCadastrar.setOnClickListener {
             criarUsuario()
+        }
+
+        buttonCadastroUsuario.setOnClickListener {
+            val intent = Intent(this, esqueciSenhaEtapa3Activity::class.java)
+            startActivity(intent)
         }
 
     }

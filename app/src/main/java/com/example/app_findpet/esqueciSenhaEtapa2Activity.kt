@@ -13,8 +13,6 @@ class esqueciSenhaEtapa2Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_esqueci_senha_etapa2)
 
-            supportActionBar!!.hide()
-
             buttonEnviarEsqueciSenha = findViewById(R.id.botao_enviarEsqueciSenha)
 
             buttonEnviarEsqueciSenha.setOnClickListener {

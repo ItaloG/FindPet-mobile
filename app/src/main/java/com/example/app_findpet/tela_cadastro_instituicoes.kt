@@ -32,6 +32,8 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
     lateinit var editTextNumero: EditText
     lateinit var editTextComplemento: EditText
     lateinit var buttonCadastrar: Button
+    lateinit var buttonEnviarEsqueciSenha: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -91,7 +93,6 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
         buttonCadastrar.setOnClickListener {
             criarInstituicao()
         }
-
 
     }
 
