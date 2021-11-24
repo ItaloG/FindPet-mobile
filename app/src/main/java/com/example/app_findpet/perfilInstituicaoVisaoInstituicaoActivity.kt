@@ -21,8 +21,6 @@ import com.example.app_findpet.utils.converterBitmapParaBase64
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-
-
 const val CODE_IMAGE = 100
 
 class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {

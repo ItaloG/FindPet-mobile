@@ -186,8 +186,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="10dp"
-                android:drawableEnd="@drawable/ic_baseline_add_24"
-                android:drawablePadding="10dp"
                 android:drawableTint="@color/marromEscuro"
                 android:gravity="center"
                 android:text="Servicos"
@@ -200,25 +198,20 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/background_servico"
-                    android:drawableEnd="@drawable/close_24"
-                    android:drawableTint="@color/marromEscuro"
-                    android:gravity="center"
-                    android:padding="8dp"
-                    android:text="Servico"
-                    android:textColor="@color/marromEscuro" />
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:background="@drawable/background_servico"-->
+                <!--                    android:drawableEnd="@drawable/close_24"-->
+                <!--                    android:drawableTint="@color/marromEscuro"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:padding="8dp"-->
+                <!--                    android:text="Servico"-->
+                <!--                    android:textColor="@color/marromEscuro" />-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:background="@drawable/background_servico"
-                    android:padding="8dp"
-                    android:text="Servico"
-                    android:textColor="@color/marromEscuro" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
 
             </LinearLayout>
 
