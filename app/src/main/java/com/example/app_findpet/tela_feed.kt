@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
@@ -14,26 +15,39 @@ import com.example.app_findpet.ui.perfilInstituicaoVisaoInstituicaoActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class tela_feed : AppCompatActivity() {
-    lateinit var navController : NavController
-    lateinit var bot_navigation : BottomNavigationView
+
+    //    lateinit var navController : NavController
+    lateinit var bot_navigation: BottomNavigationView
+
+    lateinit var animalPerdidoFragment: AnimalPerdidoFragment
+    lateinit var favoritosFragment: FavoriteFragment
+    lateinit var feedFragment: FeedFragment
+    lateinit var mapaFragment: MapaFragment
+    lateinit var sejaMenbroFragment: SejaMembroFragment
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_feed)
 
-        supportActionBar!!.title = ""
+        animalPerdidoFragment = AnimalPerdidoFragment()
+        favoritosFragment = FavoriteFragment()
+        feedFragment = FeedFragment()
+        mapaFragment = MapaFragment()
+        sejaMenbroFragment = SejaMembroFragment()
 
         bot_navigation = findViewById(R.id.bot_navigation)
-        navController = findNavController(R.id.hostFragment)
-        bot_navigation.setupWithNavController(navController)
+
+        setFragment(feedFragment)
+
+//        navController = findNavController(R.id.hostFragment)
+//        bot_navigation.setupWithNavController(navController)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.bottom_menu, menu)
-        return true
+    private fun setFragment(fragment: Fragment) {
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.fr_feed, fragment)
+        fragmentTransaction.commit()
     }
-
-
 
     private fun abrirPerfil() {
         val dados = getSharedPreferences("dados_usuario", Context.MODE_PRIVATE)
