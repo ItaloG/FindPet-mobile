@@ -1,10 +1,16 @@
-package com.example.app_findpet.apiFindpet
+package com.example.app_findpet.classes
 
-class Instituicao {
+import com.google.gson.annotations.SerializedName
+
+class Login {
+
     var id: Int = 0
     var nome: String = ""
-    var tipoEstabelecimento: Int = 0
+    var cpf: String = ""
     var cnpj: String = ""
+    var tipoEstabelecimento: Int = 0
+    var url_foto_perfil: String = ""
+    var url_foto_banner: String = ""
     var email: String = ""
     var senha: String = ""
     var telefone: String = ""
@@ -13,13 +19,16 @@ class Instituicao {
     var cep: String = ""
     var numero: Int = 0
     var complemento: String = ""
+    var tipo_usuario: String = ""
     var descricao: String = ""
     var token: String = ""
 
-
     override fun toString(): String {
-        return "Instituicao(id='$id', " +
+        return "Login(id='$id', " +
                 "nome='$nome', " +
+                "cpf='$cpf', " +
+                "url_foto_perfil='$url_foto_perfil', " +
+                "url_foto_banner='$url_foto_banner', " +
                 "tipoEstabelecimento='$tipoEstabelecimento', " +
                 "cnpj='$cnpj', " +
                 "email='$email', " +
@@ -30,7 +39,9 @@ class Instituicao {
                 "cep='$cep', " +
                 "numero='$numero', " +
                 "complemento='$complemento'," +
+                "tipo_usuario='$tipo_usuario', " +
                 "descricao='$descricao', " +
                 "token='$token')"
     }
+
 }

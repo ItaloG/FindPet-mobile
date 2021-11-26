@@ -1,5 +1,6 @@
 package com.example.app_findpet.apiFindpet
 
+import com.example.app_findpet.classes.*
 import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.*

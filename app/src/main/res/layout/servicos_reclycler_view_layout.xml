@@ -13,6 +13,7 @@
         app:cardCornerRadius="16dp">
 
         <TextView
+            android:id="@+id/servico_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/background_servico"

@@ -2,14 +2,11 @@ package com.example.app_findpet
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.*
-import com.example.app_findpet.apiFindpet.Instituicao
+import com.example.app_findpet.classes.Instituicao
 import com.example.app_findpet.apiFindpet.RetrofitFactoryFindpet
 import com.example.app_findpet.apiViacep.Cep
 import com.example.app_findpet.apiViacep.RetrofitFactoryViacep
@@ -51,7 +48,7 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
         editTextCep = findViewById(R.id.et_cep_instituicao)
         editTextRua = findViewById(R.id.et_endereco_instituicao)
         editTextNumero = findViewById(R.id.et_numero_instituicao)
-        editTextComplemento = findViewById(R.id.et_comlemento_instituicao)
+        editTextComplemento = findViewById(R.id.et_complemento_instituicao)
         buttonCadastrar = findViewById(R.id.botao_cadastro_instituicao)
 
         editTextCnpj.addTextChangedListener(

@@ -7,15 +7,15 @@ import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.app_findpet.apiFindpet.Descricao
+import com.example.app_findpet.adapters.ServicosAdapter
+import com.example.app_findpet.classes.Descricao
 import com.example.app_findpet.apiFindpet.RetrofitFactoryFindpet
 import com.example.app_findpet.utils.converterBitmapParaBase64
 import retrofit2.Call
@@ -42,6 +42,9 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
     lateinit var tvNovaDescricao: TextView
     lateinit var tvDescricao: TextView
 
+    lateinit var rvServicos: RecyclerView
+    lateinit var servicosAdapter: ServicosAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_perfil_instituicao_visao_instituicao)
@@ -59,6 +62,8 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
         tvTrocarFoto = findViewById(R.id.tv_trocar_foto_instituicao)
         tvNovaDescricao = findViewById(R.id.tv_nova_descricao)
         tvDescricao = findViewById(R.id.tv_descricao)
+
+
 
         preencherTelaPerfil()
 
@@ -134,6 +139,7 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
 
         view.findViewById<View>(R.id.btn_submit_descricao).setOnClickListener {
             val dados = getSharedPreferences("dados_usuario", Context.MODE_PRIVATE)
+            val editor = dados.edit()
             val token = dados.getString("token", "")
             val id = dados.getInt("id", 0)
 
@@ -149,7 +155,9 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
                 override fun onResponse(call: Call<Descricao>, response: Response<Descricao>) {
                     val descricao = response.body()
 
-                    tvDescricao.text = descricao!!.descricao
+                    editor.putString("descricao", descricao!!.descricao)
+                    tvDescricao.text = descricao.descricao
+
 
                     alerta.dismiss()
                 }

@@ -57,7 +57,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Trocar foto"
-                    android:textColor="@color/marromClaro"
+                    android:textColor="@color/marrommClarinho"
                     android:textSize="13sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -211,7 +211,8 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/servicos_reclycler_view_layout" />
 
             </LinearLayout>
 
@@ -278,7 +279,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Nome"
-                            android:textColor="@color/marrom"
+                            android:textColor="@color/marromEscuro"
                             android:textSize="13sp"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toTopOf="@+id/txt_caracteristicas3"
@@ -386,7 +387,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Nome"
-                            android:textColor="@color/marrom"
+                            android:textColor="@color/marromEscuro"
                             android:textSize="13sp"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toTopOf="@+id/txt_caracteristicas4"

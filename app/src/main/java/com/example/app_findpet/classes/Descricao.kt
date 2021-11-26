@@ -1,4 +1,4 @@
-package com.example.app_findpet.apiFindpet
+package com.example.app_findpet.classes
 
 class Descricao {
 
