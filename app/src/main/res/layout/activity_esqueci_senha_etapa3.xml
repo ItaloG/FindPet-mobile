@@ -74,7 +74,7 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            android:background="@color/marromEscuro"
+            android:background="@drawable/borda_marrom_escuro"
             android:inputType="textPersonName"
             android:text="Alterar senha"
             android:textColor="@color/white"

@@ -51,7 +51,7 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
         editTextCep = findViewById(R.id.et_cep_instituicao)
         editTextRua = findViewById(R.id.et_endereco_instituicao)
         editTextNumero = findViewById(R.id.et_numero_instituicao)
-        editTextComplemento = findViewById(R.id.et_comlemento_instituicao)
+        editTextComplemento = findViewById(R.id.et_complemento_instituicao)
         buttonCadastrar = findViewById(R.id.botao_cadastro_instituicao)
 
         editTextCnpj.addTextChangedListener(

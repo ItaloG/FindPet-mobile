@@ -158,7 +158,8 @@
                 android:inputType="number"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.2" />
 
             <EditText
                 android:id="@+id/et_complemento_instituicao"
@@ -169,7 +170,8 @@
                 android:hint="Complemento"
                 android:inputType="number"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/et_numero_instituicao" />
+                app:layout_constraintStart_toEndOf="@+id/et_numero_instituicao"
+                tools:ignore="MissingConstraints" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
