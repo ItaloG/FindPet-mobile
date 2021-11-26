@@ -14,20 +14,14 @@
         <activity
             android:name=".perfilInstituicaoVisaoInstituicaoActivity"
             android:parentActivityName=".tela_feed">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
 
         <activity android:name=".perfilAnimalActivity" />
 
         <activity android:name=".campanhasActivity"
             android:parentActivityName=".perfilInstituicaoVisaoInstituicaoActivity">
-<!--                        <intent-filter>-->
-<!--                            <action android:name="android.intent.action.MAIN" />-->
-<!--                            <category android:name="android.intent.category.LAUNCHER" />-->
-<!--                        </intent-filter>-->
+
         </activity>
         <activity android:name=".perfilInstituicaoActivity" />
 
@@ -82,10 +76,10 @@
         <activity android:name=".tela_escolha_cadastro" />
 
         <activity android:name=".MainActivity">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <meta-data

@@ -211,7 +211,8 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/servicos_reclycler_view_layout" />
 
             </LinearLayout>
 
