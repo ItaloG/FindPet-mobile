@@ -29,4 +29,9 @@ interface RetrofitServiceFindpet {
         @Path("id") id: Int,
         @Body descricao: Descricao
     ): Call<Descricao>
+
+    @GET("servicos")
+    fun listarServicos(
+        @Header("Authorization") authorization: String,
+    ): Call<List<Servico>>
 }

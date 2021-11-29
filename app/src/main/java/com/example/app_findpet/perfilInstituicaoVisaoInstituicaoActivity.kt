@@ -12,15 +12,18 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.app_findpet.adapters.ServicosAdapter
 import com.example.app_findpet.classes.Descricao
 import com.example.app_findpet.apiFindpet.RetrofitFactoryFindpet
+import com.example.app_findpet.classes.Servico
 import com.example.app_findpet.utils.converterBitmapParaBase64
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+
 const val CODE_IMAGE = 100
 
 class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
@@ -63,7 +66,16 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
         tvNovaDescricao = findViewById(R.id.tv_nova_descricao)
         tvDescricao = findViewById(R.id.tv_descricao)
 
+        rvServicos = findViewById(R.id.rv_servicos)
+        servicosAdapter = ServicosAdapter(this)
 
+        rvServicos.layoutManager =
+            LinearLayoutManager(
+                this,
+                LinearLayoutManager.VERTICAL,
+                false
+            )
+        rvServicos.adapter = servicosAdapter
 
         preencherTelaPerfil()
 
@@ -89,9 +101,14 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
             val intent = Intent(this, cadastrar_novo_perfilFuncionario::class.java)
             startActivity(intent)
         }
+
+
     }
 
     private fun preencherTelaPerfil() {
+
+        listarServicos()
+
         val dados = getSharedPreferences("dados_usuario", Context.MODE_PRIVATE)
 
         tvNomeInstituicao.text = dados.getString("nome", "")
@@ -104,6 +121,29 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
         Glide.with(this).load(urlBanner).into(ivBannerInstituicao)
         val urlPerfil = dados.getString("url_foto_perfil", "")
         Glide.with(this).load(urlPerfil).into(ivPerfilInstituicao)
+    }
+
+    private fun listarServicos() {
+
+        val dados = getSharedPreferences("dados_usuario", Context.MODE_PRIVATE)
+        val token = dados.getString("token", "")
+
+        val remote = RetrofitFactoryFindpet().retrofitServiceFindpet()
+        val call: Call<List<Servico>> = remote.listarServicos("Bearer $token")
+
+        call.enqueue(object : Callback<List<Servico>> {
+            override fun onResponse(call: Call<List<Servico>>, response: Response<List<Servico>>) {
+                val servicos = response.body()
+
+                servicosAdapter.updateListaServicos(servicos!!)
+            }
+
+            override fun onFailure(call: Call<List<Servico>>, t: Throwable) {
+                Log.i("xpto", t.message.toString())
+            }
+
+        })
+
     }
 
     private fun abrirGaleria() {

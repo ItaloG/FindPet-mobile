@@ -68,7 +68,6 @@ class MainActivity : AppCompatActivity() {
         call.enqueue(object : Callback<Login> {
             override fun onResponse(call: Call<Login>, response: Response<Login>) {
                 val usuario = response.body()
-                Log.i("xpto", usuario.toString())
                 val dados = getSharedPreferences("dados_usuario", Context.MODE_PRIVATE)
                 val editor = dados.edit()
 

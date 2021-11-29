@@ -210,6 +210,7 @@
                 <!--                    android:textColor="@color/marromEscuro" />-->
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_servicos"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     tools:listitem="@layout/servicos_reclycler_view_layout" />
