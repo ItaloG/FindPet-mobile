@@ -1,4 +1,4 @@
-package com.example.app_findpet.apiFindpet
+package com.example.app_findpet.classes
 
 class Instituicao {
     var id: Int = 0
@@ -13,6 +13,7 @@ class Instituicao {
     var cep: String = ""
     var numero: Int = 0
     var complemento: String = ""
+    var descricao: String = ""
     var token: String = ""
 
 
@@ -29,6 +30,7 @@ class Instituicao {
                 "cep='$cep', " +
                 "numero='$numero', " +
                 "complemento='$complemento'," +
+                "descricao='$descricao', " +
                 "token='$token')"
     }
 }

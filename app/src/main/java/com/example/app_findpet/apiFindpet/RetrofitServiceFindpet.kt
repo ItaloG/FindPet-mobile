@@ -1,8 +1,9 @@
 package com.example.app_findpet.apiFindpet
 
+import com.example.app_findpet.classes.*
+import okhttp3.RequestBody
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface RetrofitServiceFindpet {
     @POST("cadastro/instituicao")
@@ -13,4 +14,24 @@ interface RetrofitServiceFindpet {
 
     @POST("login")
     fun login(@Body login: Login): Call<Login>
+
+    @Multipart
+    @PUT("instituicoes/{id}/perfil")
+    fun trocarFotoPerfilInstituicao(
+        @Header("Authorization") authorization: String,
+        @Path("id") id: Int,
+        @Part("image") image: RequestBody
+    ): Call<Image>
+
+    @PUT("instituicoes/{id}/descricao")
+    fun enviarDescricao(
+        @Header("Authorization") authorization: String,
+        @Path("id") id: Int,
+        @Body descricao: Descricao
+    ): Call<Descricao>
+
+    @GET("servicos")
+    fun listarServicos(
+        @Header("Authorization") authorization: String,
+    ): Call<List<Servico>>
 }

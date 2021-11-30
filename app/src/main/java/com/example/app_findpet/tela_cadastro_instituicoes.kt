@@ -2,14 +2,11 @@ package com.example.app_findpet
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.*
-import com.example.app_findpet.apiFindpet.Instituicao
+import com.example.app_findpet.classes.Instituicao
 import com.example.app_findpet.apiFindpet.RetrofitFactoryFindpet
 import com.example.app_findpet.apiViacep.Cep
 import com.example.app_findpet.apiViacep.RetrofitFactoryViacep
@@ -32,6 +29,8 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
     lateinit var editTextNumero: EditText
     lateinit var editTextComplemento: EditText
     lateinit var buttonCadastrar: Button
+    lateinit var buttonEnviarEsqueciSenha: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,7 +48,7 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
         editTextCep = findViewById(R.id.et_cep_instituicao)
         editTextRua = findViewById(R.id.et_endereco_instituicao)
         editTextNumero = findViewById(R.id.et_numero_instituicao)
-        editTextComplemento = findViewById(R.id.et_comlemento_instituicao)
+        editTextComplemento = findViewById(R.id.et_complemento_instituicao)
         buttonCadastrar = findViewById(R.id.botao_cadastro_instituicao)
 
         editTextCnpj.addTextChangedListener(
@@ -92,7 +91,6 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
             criarInstituicao()
         }
 
-
     }
 
     private fun buscarEndereco(CEP: String) {
@@ -117,10 +115,11 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
     private fun abrirPerfil() {
         val intent = Intent(this, perfilInstituicaoVisaoInstituicaoActivity::class.java)
         startActivity(intent)
+
     }
 
-    private  fun criarInstituicao() {
-        var instituicao =  Instituicao()
+    private fun criarInstituicao() {
+        var instituicao = Instituicao()
 
         instituicao.nome = editTextNome.text.toString()
         instituicao.tipoEstabelecimento = spinnerTipoEstabelecimento.selectedItemPosition
@@ -156,12 +155,12 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
                 editor.putString("cep", instituicao.cep)
                 editor.putInt("numero", instituicao.numero)
                 editor.putString("complemento", instituicao.complemento)
+                editor.putString("descricao", instituicao.descricao)
+                editor.putString("token", instituicao.token)
 
                 editor.apply()
 
                 abrirPerfil()
-
-                Log.i("xpto", instituicao.toString())
             }
 
             override fun onFailure(call: Call<Instituicao>, t: Throwable) {

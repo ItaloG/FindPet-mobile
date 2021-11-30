@@ -7,7 +7,8 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
-import com.example.app_findpet.apiFindpet.Login
+import android.widget.TextView
+import com.example.app_findpet.classes.Login
 import com.example.app_findpet.apiFindpet.RetrofitFactoryFindpet
 import retrofit2.Call
 import retrofit2.Callback
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var editTextSenha: EditText
     lateinit var buttonCadastrar: Button
     lateinit var buttonEntrar: Button
+    lateinit var buttonEnviarEsqueciSenha: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         editTextSenha = findViewById(R.id.et_senha)
         buttonCadastrar = findViewById(R.id.btn_cadastrar)
         buttonEntrar = findViewById(R.id.btn_entrar)
+        buttonEnviarEsqueciSenha = findViewById(R.id.tv_esqueceu_senha)
 
         buttonEntrar.setOnClickListener {
             logar()
@@ -38,6 +41,12 @@ class MainActivity : AppCompatActivity() {
 
         buttonCadastrar.setOnClickListener {
             val intent = Intent(this, tela_escolha_cadastro::class.java)
+            startActivity(intent)
+
+        }
+
+        buttonEnviarEsqueciSenha.setOnClickListener {
+            val intent = Intent(this, esqueciSenhaEtapa1Activity::class.java)
             startActivity(intent)
         }
     }
@@ -59,7 +68,6 @@ class MainActivity : AppCompatActivity() {
         call.enqueue(object : Callback<Login> {
             override fun onResponse(call: Call<Login>, response: Response<Login>) {
                 val usuario = response.body()
-
                 val dados = getSharedPreferences("dados_usuario", Context.MODE_PRIVATE)
                 val editor = dados.edit()
 
@@ -79,13 +87,13 @@ class MainActivity : AppCompatActivity() {
                 editor.putInt("numero", usuario.numero)
                 editor.putString("complemento", usuario.complemento)
                 editor.putString("tipo_usuario", usuario.tipo_usuario)
+                editor.putString("descricao", usuario.descricao!!)
                 editor.putString("token", usuario.token)
 
                 editor.apply()
 
                 abrirFeed()
 
-                Log.i("xpto", usuario.toString())
             }
 
             override fun onFailure(call: Call<Login>, t: Throwable) {

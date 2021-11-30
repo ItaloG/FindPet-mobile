@@ -10,7 +10,7 @@
         android:id="@+id/cl_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/marromClaro"
+        android:background="@drawable/borda_laranja_escuro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -142,11 +142,12 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="40dp"
-            android:background="@drawable/borda_laranja_claro"
+            android:textColor="@color/white"
+            android:background="@drawable/borda_marrom_escuro"
             android:inputType="textPersonName"
             android:radius="200dp"
             android:text="Salvar"
-            android:textSize="20sp"></Button>
+            android:textSize="20sp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

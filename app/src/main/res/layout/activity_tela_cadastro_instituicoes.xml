@@ -14,173 +14,168 @@
         android:orientation="vertical"
         android:padding="12dp">
 
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
+            android:id="@+id/et_nome_instituicao"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/borda_cinza">
-
-            <EditText
-                android:id="@+id/et_nome_instituicao"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto"
-                android:hint="Nome da instituição"
-                android:inputType="textPersonName" />
-        </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/borda_cinza"
+            android:fontFamily="@font/roboto"
+            android:hint="Nome"
+            android:inputType="textPersonName"
+            android:padding="10dp" />
 
         <Spinner
             android:id="@+id/spinner_tipo_estabeleciamento"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/borda_cinza"
             android:entries="@array/tipos_estabelecimento"
             android:padding="16dp" />
 
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
+            android:id="@+id/et_cnpj"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/borda_cinza">
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/borda_cinza"
+            android:fontFamily="@font/roboto"
+            android:hint="CNPJ"
+            android:inputType="text"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/et_email_instituicao"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/borda_cinza"
+            android:fontFamily="@font/roboto"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/et_senha_instituicao"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/borda_cinza"
+            android:fontFamily="@font/roboto"
+            android:hint="Senha"
+            android:inputType="textPassword"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/et_telefone_instituicao"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/borda_cinza"
+            android:fontFamily="@font/roboto"
+            android:hint="Telefone"
+            android:inputType="number"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/et_celular_instituicao"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/borda_cinza"
+            android:fontFamily="@font/roboto"
+            android:hint="Celular"
+            android:inputType="number"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/et_cep_instituicao"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/borda_cinza"
+            android:fontFamily="@font/roboto"
+            android:hint="CEP"
+            android:inputType="number"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/et_endereco_instituicao"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/borda_cinza"
+            android:fontFamily="@font/roboto"
+            android:hint="Rua/Avenida"
+            android:inputType="number" />
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:orientation="horizontal">-->
+
+        <!--            <EditText-->
+        <!--                android:id="@+id/et_numero_instituicao"-->
+        <!--                android:layout_width="180dp"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:layout_marginTop="8dp"-->
+        <!--                android:background="@drawable/borda_cinza"-->
+        <!--                android:fontFamily="@font/roboto"-->
+        <!--                android:hint="Número"-->
+        <!--                android:inputType="number" />-->
+
+        <!--            <com.google.android.material.textfield.TextInputLayout-->
+        <!--                android:layout_width="180dp"-->
+        <!--                android:layout_height="wrap_content">-->
+
+        <!--                <EditText-->
+        <!--                    android:id="@+id/et_comlemento_instituicao"-->
+        <!--                    android:layout_width="180dp"-->
+        <!--                    android:layout_height="50dp"-->
+        <!--                    android:background="@drawable/borda_cinza"-->
+        <!--                    android:fontFamily="@font/roboto"-->
+        <!--                    android:hint="Complemento"-->
+        <!--                    android:inputType="text" />-->
+        <!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+        <!--        </LinearLayout>-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/et_cnpj"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:id="@+id/et_numero_instituicao"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:background="@drawable/borda_cinza"
                 android:fontFamily="@font/roboto"
-                android:hint="CNPJ"
-                android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:hint="Número"
+                android:inputType="number"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/et_complemento_instituicao" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/borda_cinza">
 
             <EditText
-                android:id="@+id/et_email_instituicao"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:id="@+id/et_complemento_instituicao"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/borda_cinza"
                 android:fontFamily="@font/roboto"
-                android:hint="Email"
-                android:inputType="textEmailAddress" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:hint="Complemento"
+                android:inputType="number"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/borda_cinza">
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <EditText
-                android:id="@+id/et_senha_instituicao"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto"
-                android:hint="Senha"
-                android:inputType="textPassword" />
-        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/borda_cinza">
-
-            <EditText
-                android:id="@+id/et_telefone_instituicao"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto"
-                android:hint="Telefone"
-                android:inputType="number" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/borda_cinza">
-
-            <EditText
-                android:id="@+id/et_celular_instituicao"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto"
-                android:hint="Celular"
-                android:inputType="number" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/borda_cinza">
-
-            <EditText
-                android:id="@+id/et_cep_instituicao"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto"
-                android:hint="CEP"
-                android:inputType="number" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/borda_cinza">
-
-            <EditText
-                android:id="@+id/et_endereco_instituicao"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto"
-                android:hint="Rua/Avenida"
-                android:inputType="number" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="25dp"
-                android:background="@drawable/borda_cinza">
-
-                <EditText
-                    android:id="@+id/et_numero_instituicao"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto"
-                    android:hint="Número"
-                    android:inputType="number" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/borda_cinza">
-
-                <EditText
-                    android:id="@+id/et_comlemento_instituicao"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto"
-                    android:hint="Comlemento"
-                    android:inputType="text" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
             android:id="@+id/botao_cadastro_instituicao"
@@ -188,13 +183,14 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_marginTop="25dp"
-            android:background="@drawable/borda_laranja"
+            android:background="@drawable/borda_marrom"
             android:inputType="textPersonName"
             android:text="Cadastrar"
             android:textColor="@color/white"
             android:textSize="20sp">
 
         </Button>
+
     </LinearLayout>
 
 </ScrollView>
