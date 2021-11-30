@@ -15,8 +15,10 @@ class AnimalPerdidoFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_seja_membro, container, false)
+
+
+        return inflater.inflate(R.layout.fragment_animal_perdido, container, false)
+
     }
 
 
