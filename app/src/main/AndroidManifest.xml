@@ -26,15 +26,17 @@
         <activity android:name=".ui.editarPerfilInstituicaoActivity">
 
         </activity>
-        <activity android:name=".tela_feed" />
-        <activity android:name=".ui.tela_cadastro_usuarioComum" />
-        <activity android:name=".tela_cadastro_instituicoes" />
-        <activity android:name=".tela_escolha_cadastro" />
-        <activity android:name=".ui.MainActivity">
+        <activity android:name=".tela_feed">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".ui.tela_cadastro_usuarioComum" />
+        <activity android:name=".tela_cadastro_instituicoes" />
+        <activity android:name=".tela_escolha_cadastro" />
+        <activity android:name=".ui.MainActivity">
+
         </activity>
 
         <meta-data
