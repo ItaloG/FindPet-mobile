@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.app_findpet.R
 import com.example.app_findpet.utils.converterBitmapParaBase64
 
 const val CCODE_IMAGE = 100

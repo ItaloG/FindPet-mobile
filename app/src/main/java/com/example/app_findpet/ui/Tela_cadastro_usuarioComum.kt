@@ -8,6 +8,8 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
+import com.example.app_findpet.R
 import com.example.app_findpet.apiFindpet.RetrofitFactoryFindpet
 import com.example.app_findpet.classes.Usuario
 import com.example.app_findpet.apiViacep.Cep
@@ -87,13 +89,8 @@ class tela_cadastro_usuarioComum : AppCompatActivity() {
             }
         }
 
-        buttonCadastrar.setOnClickListener {
-            criarUsuario()
-        }
-
         buttonCadastroUsuario.setOnClickListener {
-            val intent = Intent(this, esqueciSenhaEtapa3Activity::class.java)
-            startActivity(intent)
+            criarUsuario()
         }
 
     }
@@ -141,25 +138,37 @@ class tela_cadastro_usuarioComum : AppCompatActivity() {
 
         call.enqueue(object : Callback<Usuario> {
             override fun onResponse(call: Call<Usuario>, response: Response<Usuario>) {
-                val usuario = response.body()
+                if (response.code() == 400) {
+                    return Toast.makeText(
+                        applicationContext,
+                        "EMAIL JA CADASTRADO",
+                        Toast.LENGTH_LONG
+                    ).show()
+                } else {
+                    val usuario = response.body()
 
-                val dados = getSharedPreferences("dados_usuario", Context.MODE_PRIVATE)
-                val editor = dados.edit()
+                    val dados = getSharedPreferences("dados_usuario", Context.MODE_PRIVATE)
+                    val editor = dados.edit()
 
-                editor.putString("nome", usuario!!.nome)
-                editor.putString("cpf", usuario.cpf)
-                editor.putString("email", usuario.email)
-                editor.putString("senha", usuario.senha)
-                editor.putString("telefone", usuario.telefone)
-                editor.putString("celular", usuario.celular)
-                editor.putString("logradouro", usuario.logradouro)
-                editor.putString("cep", usuario.cep)
-                editor.putInt("numero", usuario.numero)
-                editor.putString("complemento", usuario.complemento)
+                    editor.putString("nome", usuario!!.nome)
+                    editor.putInt("id", usuario.id)
+                    editor.putString("cpf", usuario.cpf)
+                    editor.putString("email", usuario.email)
+                    editor.putString("senha", usuario.senha)
+                    editor.putString("telefone", usuario.telefone)
+                    editor.putString("celular", usuario.celular)
+                    editor.putString("logradouro", usuario.logradouro)
+                    editor.putString("cep", usuario.cep)
+                    editor.putInt("numero", usuario.numero)
+                    editor.putString("url_foto_banner", "")
+                    editor.putString("url_foto_perfil", "")
+                    editor.putString("tipo_usuario", usuario.tipo_usuario)
+                    editor.putString("complemento", usuario.complemento!!)
 
-                editor.apply()
+                    editor.apply()
 
-                abrirFeed()
+                    abrirFeed()
+                }
 
             }
 

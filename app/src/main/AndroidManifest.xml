@@ -17,43 +17,43 @@
 
         </activity>
 
-        <activity android:name=".perfilAnimalActivity" />
+        <activity android:name=".ui.perfilAnimalActivity" />
 
-        <activity android:name=".campanhasActivity"
-            android:parentActivityName=".perfilInstituicaoVisaoInstituicaoActivity">
+        <activity android:name=".ui.campanhasActivity"
+            android:parentActivityName=".ui.perfilInstituicaoVisaoInstituicaoActivity">
 
         </activity>
-        <activity android:name=".perfilInstituicaoActivity" />
+        <activity android:name=".ui.perfilInstituicaoActivity" />
 
         <activity
-            android:name=".esqueciSenhaEtapa3Activity"
-            android:parentActivityName=".esqueciSenhaEtapa2Activity" />
+            android:name=".ui.esqueciSenhaEtapa3Activity"
+            android:parentActivityName=".ui.esqueciSenhaEtapa2Activity" />
 
         <activity
-            android:name=".esqueciSenhaEtapa2Activity"
-            android:parentActivityName=".esqueciSenhaEtapa1Activity" />
+            android:name=".ui.esqueciSenhaEtapa2Activity"
+            android:parentActivityName=".ui.esqueciSenhaEtapa1Activity" />
 
         <activity
-            android:name=".esqueciSenhaEtapa1Activity"
-            android:parentActivityName=".MainActivity"></activity>
+            android:name=".ui.esqueciSenhaEtapa1Activity"
+            android:parentActivityName=".ui.MainActivity"></activity>
 
 
-        <activity android:name=".editarPerfilInstituicaoActivity">
+        <activity android:name=".ui.editarPerfilInstituicaoActivity">
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
 <!--            </intent-filter>-->
 
         </activity>
-        <activity android:name=".cadastrar_novo_perfilAnimais"
-            android:parentActivityName=".perfilInstituicaoVisaoInstituicaoActivity" >
+        <activity android:name=".ui.cadastrar_novo_perfilAnimais"
+            android:parentActivityName=".ui.perfilInstituicaoVisaoInstituicaoActivity" >
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
 <!--            </intent-filter>-->
         </activity>
-        <activity android:name=".cadastrar_novo_perfilFuncionario"
-            android:parentActivityName=".perfilInstituicaoVisaoInstituicaoActivity">
+        <activity android:name=".ui.cadastrar_novo_perfilFuncionario"
+            android:parentActivityName=".ui.perfilInstituicaoVisaoInstituicaoActivity">
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
@@ -62,11 +62,11 @@
 
         <activity android:name=".tela_feed" />
 
-        <activity android:name=".tela_cadastro_usuarioComum"
-            android:parentActivityName=".MainActivity"  />
+        <activity android:name=".ui.tela_cadastro_usuarioComum"
+            android:parentActivityName=".ui.MainActivity"  />
 
         <activity android:name=".tela_cadastro_instituicoes"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".ui.MainActivity" >
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
@@ -75,17 +75,11 @@
 
         <activity android:name=".tela_escolha_cadastro" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".ui.tela_cadastro_usuarioComum" />
-        <activity android:name=".tela_cadastro_instituicoes" />
-        <activity android:name=".tela_escolha_cadastro" />
-        <activity android:name=".ui.MainActivity">
-
         </activity>
 
         <meta-data

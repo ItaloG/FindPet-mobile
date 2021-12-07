@@ -13,6 +13,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.app_findpet.R
 import com.example.app_findpet.utils.converterBitmapParaBase64
 import com.google.android.material.textfield.TextInputEditText
 import java.time.LocalDate

@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.app_findpet.R
 import com.example.app_findpet.adapters.ServicosAdapter
 import com.example.app_findpet.classes.Descricao
 import com.example.app_findpet.apiFindpet.RetrofitFactoryFindpet

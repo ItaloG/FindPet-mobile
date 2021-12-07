@@ -1,4 +1,4 @@
-package com.example.app_findpet.adapter
+package com.example.app_findpet.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.app_findpet.R
-import com.example.app_findpet.apiFindpet.Instituicao
+import com.example.app_findpet.classes.Instituicao
 
 class feedAdapter(var context: Context) :
     RecyclerView.Adapter<feedAdapter.InstituicaoViewHolder>() {

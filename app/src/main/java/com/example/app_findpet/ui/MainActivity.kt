@@ -8,6 +8,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import com.example.app_findpet.R
 import com.example.app_findpet.classes.Login
 import com.example.app_findpet.apiFindpet.RetrofitFactoryFindpet
 import com.example.app_findpet.tela_escolha_cadastro

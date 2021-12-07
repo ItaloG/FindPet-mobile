@@ -30,7 +30,6 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
     lateinit var editTextNumero: EditText
     lateinit var editTextComplemento: EditText
     lateinit var buttonCadastrar: Button
-    lateinit var buttonEnviarEsqueciSenha: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -142,28 +141,39 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
         call.enqueue(object : Callback<Instituicao> {
 
             override fun onResponse(call: Call<Instituicao>, response: Response<Instituicao>) {
-                val instituicao = response.body()
+                if (response.code() == 400) {
+                    return Toast.makeText(
+                        applicationContext,
+                        "EMAIL JA CADASTRADO",
+                        Toast.LENGTH_LONG
+                    ).show()
+                } else {
+                    val instituicao = response.body()
 
-                val dados = getSharedPreferences("dados_usuario", Context.MODE_PRIVATE)
-                val editor = dados.edit()
+                    val dados = getSharedPreferences("dados_usuario", Context.MODE_PRIVATE)
+                    val editor = dados.edit()
 
-                editor.putString("nome", instituicao!!.nome)
-                editor.putInt("tipoEstabelecimento", instituicao.tipoEstabelecimento)
-                editor.putString("cnpj", instituicao.cnpj)
-                editor.putString("email", instituicao.email)
-                editor.putString("senha", instituicao.senha)
-                editor.putString("telefone", instituicao.telefone)
-                editor.putString("celular", instituicao.celular)
-                editor.putString("logradouro", instituicao.logradouro)
-                editor.putString("cep", instituicao.cep)
-                editor.putInt("numero", instituicao.numero)
-                editor.putString("complemento", instituicao.complemento)
-                editor.putString("descricao", instituicao.descricao)
-                editor.putString("token", instituicao.token)
+                    editor.putString("nome", instituicao!!.nome)
+                    editor.putInt("id", instituicao.id)
+                    editor.putInt("tipoEstabelecimento", instituicao.tipoEstabelecimento)
+                    editor.putString("cnpj", instituicao.cnpj)
+                    editor.putString("email", instituicao.email)
+                    editor.putString("senha", instituicao.senha)
+                    editor.putString("telefone", instituicao.telefone)
+                    editor.putString("celular", instituicao.celular)
+                    editor.putString("logradouro", instituicao.logradouro)
+                    editor.putString("cep", instituicao.cep)
+                    editor.putInt("numero", instituicao.numero)
+                    editor.putString("url_foto_banner", "")
+                    editor.putString("url_foto_perfil", "")
+                    editor.putString("complemento", instituicao.complemento)
+                    editor.putString("descricao", instituicao.descricao)
+                    editor.putString("token", instituicao.token)
 
-                editor.apply()
+                    editor.apply()
 
-                abrirPerfil()
+                    abrirPerfil()
+                }
             }
 
             override fun onFailure(call: Call<Instituicao>, t: Throwable) {

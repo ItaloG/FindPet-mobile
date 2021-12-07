@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import com.example.app_findpet.R
 import com.example.app_findpet.utils.converterBitmapParaBase64
 
 class esqueciSenhaEtapa1Activity : AppCompatActivity() {
