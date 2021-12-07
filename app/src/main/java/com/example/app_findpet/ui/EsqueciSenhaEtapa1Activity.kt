@@ -1,4 +1,4 @@
-package com.example.app_findpet
+package com.example.app_findpet.ui
 
 import android.content.Intent
 import android.graphics.BitmapFactory

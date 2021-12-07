@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="top"
     android:orientation="vertical"
-    tools:context=".perfilAnimalActivity">
+    tools:context=".ui.perfilAnimalActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_header"

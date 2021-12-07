@@ -1,4 +1,4 @@
-package com.example.app_findpet
+package com.example.app_findpet.ui
 
 import android.content.Intent
 import android.graphics.Bitmap
@@ -6,30 +6,28 @@ import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.app_findpet.utils.converterBitmapParaBase64
 
-const val CODEE_IMAGE = 100
-class editarPerfilUsuarioActivity : AppCompatActivity() {
+const val CCODE_IMAGE = 100
+class cadastrar_novo_perfilFuncionario : AppCompatActivity() {
 
     var imageBitMap: Bitmap? = null
-    lateinit var trocar_foto: TextView
-    lateinit var imagem_perfil: ImageView
+    lateinit var trocarFoto_fun: TextView
+    lateinit var imgFun: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_editar_perfil_usuario)
+        setContentView(R.layout.activity_cadastrar_novo_perfil_funcionario)
 
-        trocar_foto = findViewById(R.id.tv_trocar_foto)
-        imagem_perfil = findViewById(R.id.img_profile)
+        trocarFoto_fun = findViewById(R.id.trocar_fotoFunci)
+        imgFun = findViewById(R.id.img_profileFun)
 
-        trocar_foto.setOnClickListener {
+        trocarFoto_fun.setOnClickListener {
             abrirGaleria()
         }
     }
-
     private fun abrirGaleria() {
 
         val intent = Intent(Intent.ACTION_GET_CONTENT)
@@ -40,14 +38,14 @@ class editarPerfilUsuarioActivity : AppCompatActivity() {
                 intent,
                 "Escolha uma foto"
             ),
-            CODEE_IMAGE
+            CCODE_IMAGE
         )
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == CODEE_IMAGE && resultCode == -1) {
+        if (requestCode == CCODE_IMAGE && resultCode == -1) {
 
             // Recuperar a imagem na stream
             val stream = contentResolver.openInputStream(data!!.data!!)
@@ -56,13 +54,12 @@ class editarPerfilUsuarioActivity : AppCompatActivity() {
             imageBitMap = BitmapFactory.decodeStream(stream)
 
             // Colocar a imgaem no ImageView
-            imagem_perfil.setImageBitmap(imageBitMap)
+            imgFun.setImageBitmap(imageBitMap)
 
             Log.i("xpto", converterBitmapParaBase64(imageBitMap!!))
 
 //            trocarFotoPerfil()
         }
     }
-
 
 }

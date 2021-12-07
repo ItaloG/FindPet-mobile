@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.app_findpet.ui.tela_cadastro_usuarioComum
 
 class tela_escolha_cadastro : AppCompatActivity() {
 

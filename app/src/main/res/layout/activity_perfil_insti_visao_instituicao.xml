@@ -7,7 +7,7 @@
     android:background="@color/white"
     android:gravity="top"
     android:orientation="vertical"
-    tools:context=".perfil_insti_visaoInstituicao">
+    tools:context=".ui.perfil_insti_visaoInstituicao">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_header"

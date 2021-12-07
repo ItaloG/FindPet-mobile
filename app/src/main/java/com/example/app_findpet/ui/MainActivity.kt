@@ -1,4 +1,4 @@
-package com.example.app_findpet
+package com.example.app_findpet.ui
 
 import android.content.Context
 import android.content.Intent
@@ -10,6 +10,8 @@ import android.widget.EditText
 import android.widget.TextView
 import com.example.app_findpet.classes.Login
 import com.example.app_findpet.apiFindpet.RetrofitFactoryFindpet
+import com.example.app_findpet.tela_escolha_cadastro
+import com.example.app_findpet.tela_feed
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

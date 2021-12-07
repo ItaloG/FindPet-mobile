@@ -1,4 +1,4 @@
-package com.example.app_findpet
+package com.example.app_findpet.ui
 
 import android.content.Intent
 import android.graphics.Bitmap
@@ -6,25 +6,26 @@ import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.app_findpet.utils.converterBitmapParaBase64
 
-const val CODE_IIMAGE = 100
-class editarPerfilInstituicaoActivity : AppCompatActivity() {
+const val CODEE_IMAGE = 100
+class editarPerfilUsuarioActivity : AppCompatActivity() {
 
     var imageBitMap: Bitmap? = null
-    lateinit var editar_inst: TextView
-    lateinit var imagemEditarI: ImageView
+    lateinit var trocar_foto: TextView
+    lateinit var imagem_perfil: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_editar_perfil_instituicao)
+        setContentView(R.layout.activity_editar_perfil_usuario)
 
-        editar_inst = findViewById(R.id.editar_perfilInst)
-        imagemEditarI = findViewById(R.id.img_editarInst)
+        trocar_foto = findViewById(R.id.tv_trocar_foto)
+        imagem_perfil = findViewById(R.id.img_profile)
 
-        editar_inst.setOnClickListener {
+        trocar_foto.setOnClickListener {
             abrirGaleria()
         }
     }
@@ -39,14 +40,14 @@ class editarPerfilInstituicaoActivity : AppCompatActivity() {
                 intent,
                 "Escolha uma foto"
             ),
-            CODE_IIMAGE
+            CODEE_IMAGE
         )
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == CODE_IIMAGE && resultCode == -1) {
+        if (requestCode == CODEE_IMAGE && resultCode == -1) {
 
             // Recuperar a imagem na stream
             val stream = contentResolver.openInputStream(data!!.data!!)
@@ -55,7 +56,7 @@ class editarPerfilInstituicaoActivity : AppCompatActivity() {
             imageBitMap = BitmapFactory.decodeStream(stream)
 
             // Colocar a imgaem no ImageView
-            imagemEditarI.setImageBitmap(imageBitMap)
+            imagem_perfil.setImageBitmap(imageBitMap)
 
             Log.i("xpto", converterBitmapParaBase64(imageBitMap!!))
 
@@ -65,4 +66,3 @@ class editarPerfilInstituicaoActivity : AppCompatActivity() {
 
 
 }
-

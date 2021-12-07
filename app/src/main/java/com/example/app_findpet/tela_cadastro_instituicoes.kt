@@ -10,6 +10,7 @@ import com.example.app_findpet.classes.Instituicao
 import com.example.app_findpet.apiFindpet.RetrofitFactoryFindpet
 import com.example.app_findpet.apiViacep.Cep
 import com.example.app_findpet.apiViacep.RetrofitFactoryViacep
+import com.example.app_findpet.ui.perfilInstituicaoVisaoInstituicaoActivity
 import com.example.app_findpet.utils.MaskFormatUtil
 import retrofit2.Call
 import retrofit2.Callback
@@ -81,6 +82,8 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
 
         editTextCep.setOnFocusChangeListener { v, hasFocus ->
             val cep = MaskFormatUtil.unmask(editTextCep.text.toString())
+
+            val value = v
 
             if (!hasFocus && cep.length == 8) {
                 buscarEndereco(cep)

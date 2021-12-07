@@ -1,4 +1,4 @@
-package com.example.app_findpet
+package com.example.app_findpet.ui
 
 import android.content.Intent
 import android.graphics.Bitmap
@@ -10,24 +10,25 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.example.app_findpet.utils.converterBitmapParaBase64
 
-const val CCODE_IMAGE = 100
-class cadastrar_novo_perfilFuncionario : AppCompatActivity() {
+const val CODE_IIMAGE = 100
+class editarPerfilInstituicaoActivity : AppCompatActivity() {
 
     var imageBitMap: Bitmap? = null
-    lateinit var trocarFoto_fun: TextView
-    lateinit var imgFun: ImageView
+    lateinit var editar_inst: TextView
+    lateinit var imagemEditarI: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_cadastrar_novo_perfil_funcionario)
+        setContentView(R.layout.activity_editar_perfil_instituicao)
 
-        trocarFoto_fun = findViewById(R.id.trocar_fotoFunci)
-        imgFun = findViewById(R.id.img_profileFun)
+        editar_inst = findViewById(R.id.editar_perfilInst)
+        imagemEditarI = findViewById(R.id.img_editarInst)
 
-        trocarFoto_fun.setOnClickListener {
+        editar_inst.setOnClickListener {
             abrirGaleria()
         }
     }
+
     private fun abrirGaleria() {
 
         val intent = Intent(Intent.ACTION_GET_CONTENT)
@@ -38,14 +39,14 @@ class cadastrar_novo_perfilFuncionario : AppCompatActivity() {
                 intent,
                 "Escolha uma foto"
             ),
-            CCODE_IMAGE
+            CODE_IIMAGE
         )
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == CCODE_IMAGE && resultCode == -1) {
+        if (requestCode == CODE_IIMAGE && resultCode == -1) {
 
             // Recuperar a imagem na stream
             val stream = contentResolver.openInputStream(data!!.data!!)
@@ -54,7 +55,7 @@ class cadastrar_novo_perfilFuncionario : AppCompatActivity() {
             imageBitMap = BitmapFactory.decodeStream(stream)
 
             // Colocar a imgaem no ImageView
-            imgFun.setImageBitmap(imageBitMap)
+            imagemEditarI.setImageBitmap(imageBitMap)
 
             Log.i("xpto", converterBitmapParaBase64(imageBitMap!!))
 
@@ -62,4 +63,6 @@ class cadastrar_novo_perfilFuncionario : AppCompatActivity() {
         }
     }
 
+
 }
+
