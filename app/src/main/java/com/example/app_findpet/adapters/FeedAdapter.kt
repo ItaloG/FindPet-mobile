@@ -1,4 +1,4 @@
-package com.example.app_findpet.adapters
+ package com.example.app_findpet.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -30,7 +30,7 @@ class feedAdapter(var context: Context) :
     override fun onBindViewHolder(holder: InstituicaoViewHolder, position: Int) {
         val instituicao = listaInstituicao[position]
 
-        holder.tituulo.text = instituicao.nome
+        holder.titulo.text = instituicao.nome
     }
 
     override fun getItemCount(): Int {
@@ -39,7 +39,7 @@ class feedAdapter(var context: Context) :
 
     class InstituicaoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        val tituulo = itemView.findViewById<TextView>(R.id.tv_titutlo_card_instituicao)
+        val titulo = itemView.findViewById<TextView>(R.id.tv_titutlo_card_instituicao)
 
     }
 }

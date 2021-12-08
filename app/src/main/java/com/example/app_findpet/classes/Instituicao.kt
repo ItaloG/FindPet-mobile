@@ -11,6 +11,8 @@ class Instituicao {
     var celular: String = ""
     var logradouro: String = ""
     var cep: String = ""
+    var url_foto_perfil: String = ""
+    var url_foto_banner: String = ""
     var numero: Int = 0
     var complemento: String = ""
     var descricao: String = ""

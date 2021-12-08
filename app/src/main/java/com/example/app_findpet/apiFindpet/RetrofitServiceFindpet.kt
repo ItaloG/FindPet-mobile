@@ -1,5 +1,6 @@
 package com.example.app_findpet.apiFindpet
 
+import android.content.IntentFilter
 import com.example.app_findpet.classes.*
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -34,4 +35,9 @@ interface RetrofitServiceFindpet {
     fun listarServicos(
         @Header("Authorization") authorization: String,
     ): Call<List<Servico>>
+
+    @GET("instituicoes")
+    fun listarInstituicao(
+        @Header("Authorization") authorization: String,
+    ): Call<List<Instituicao>>
 }
