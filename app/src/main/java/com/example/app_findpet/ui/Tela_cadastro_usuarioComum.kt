@@ -164,6 +164,7 @@ class tela_cadastro_usuarioComum : AppCompatActivity() {
                     editor.putString("url_foto_perfil", "")
                     editor.putString("tipo_usuario", usuario.tipo_usuario)
                     editor.putString("complemento", usuario.complemento!!)
+                    editor.putString("token", usuario.token)
 
                     editor.apply()
 

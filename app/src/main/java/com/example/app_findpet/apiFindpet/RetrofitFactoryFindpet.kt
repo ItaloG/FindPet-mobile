@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class RetrofitFactoryFindpet {
 
-    var URL = "http://10.0.2.2:3333/"
+    var URL = "http://10.107.144.26:3333/"
 
     var retrofitFactoryFindpet =
         Retrofit.Builder()

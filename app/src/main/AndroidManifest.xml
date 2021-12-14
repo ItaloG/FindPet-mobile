@@ -10,7 +10,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppFindPet">
+        android:theme="@style/Theme.AppFindPet"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".ui.perfilInstituicaoVisaoInstituicaoActivity"
             android:parentActivityName=".tela_feed">
@@ -19,7 +20,8 @@
 
         <activity android:name=".ui.perfilAnimalActivity" />
 
-        <activity android:name=".ui.campanhasActivity"
+        <activity
+            android:name=".ui.campanhasActivity"
             android:parentActivityName=".ui.perfilInstituicaoVisaoInstituicaoActivity">
 
         </activity>
@@ -39,38 +41,30 @@
 
 
         <activity android:name=".ui.editarPerfilInstituicaoActivity">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+
 
         </activity>
-        <activity android:name=".ui.cadastrar_novo_perfilAnimais"
-            android:parentActivityName=".ui.perfilInstituicaoVisaoInstituicaoActivity" >
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-        </activity>
-        <activity android:name=".ui.cadastrar_novo_perfilFuncionario"
+        <activity
+            android:name=".ui.cadastrar_novo_perfilAnimais"
             android:parentActivityName=".ui.perfilInstituicaoVisaoInstituicaoActivity">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+
+        </activity>
+        <activity
+            android:name=".ui.cadastrar_novo_perfilFuncionario"
+            android:parentActivityName=".ui.perfilInstituicaoVisaoInstituicaoActivity">
+
         </activity>
 
         <activity android:name=".tela_feed" />
 
-        <activity android:name=".ui.tela_cadastro_usuarioComum"
-            android:parentActivityName=".ui.MainActivity"  />
+        <activity
+            android:name=".ui.tela_cadastro_usuarioComum"
+            android:parentActivityName=".ui.MainActivity" />
 
-        <activity android:name=".tela_cadastro_instituicoes"
-            android:parentActivityName=".ui.MainActivity" >
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+        <activity
+            android:name=".tela_cadastro_instituicoes"
+            android:parentActivityName=".ui.MainActivity">
+
         </activity>
 
         <activity android:name=".tela_escolha_cadastro" />

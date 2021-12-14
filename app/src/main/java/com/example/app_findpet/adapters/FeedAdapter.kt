@@ -1,6 +1,7 @@
  package com.example.app_findpet.adapters
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,16 +10,19 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.app_findpet.R
 import com.example.app_findpet.classes.Instituicao
 
-class feedAdapter(var context: Context) :
-    RecyclerView.Adapter<feedAdapter.InstituicaoViewHolder>() {
+
+class FeedAdapter(var context: Context) :
+    RecyclerView.Adapter<FeedAdapter.InstituicaoViewHolder>() {
 
     private var listaInstituicao = emptyList<Instituicao>()
 
     fun updateListaInstituicao(lista: List<Instituicao>) {
+        Log.i("xpto", "lista")
         listaInstituicao = lista
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): InstituicaoViewHolder {
+        Log.i("xpto", "holder")
         val view =
             LayoutInflater
                 .from(parent.context)
@@ -28,6 +32,7 @@ class feedAdapter(var context: Context) :
     }
 
     override fun onBindViewHolder(holder: InstituicaoViewHolder, position: Int) {
+        Log.i("xpto", "bind")
         val instituicao = listaInstituicao[position]
 
         holder.titulo.text = instituicao.nome

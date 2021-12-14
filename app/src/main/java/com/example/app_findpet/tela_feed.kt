@@ -7,9 +7,6 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.app_findpet.adapters.feedAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class tela_feed : AppCompatActivity() {
@@ -23,7 +20,7 @@ class tela_feed : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_feed)
-
+        supportActionBar?.hide()
 
         navController = findNavController(R.id.hostFragment)
         bot_navigation = findViewById(R.id.bot_navigation)

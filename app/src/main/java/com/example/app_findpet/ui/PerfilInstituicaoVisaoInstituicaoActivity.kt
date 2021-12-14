@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.app_findpet.R
 import com.example.app_findpet.adapters.ServicosAdapter
-import com.example.app_findpet.adapters.feedAdapter
+
 import com.example.app_findpet.classes.Descricao
 import com.example.app_findpet.apiFindpet.RetrofitFactoryFindpet
 import com.example.app_findpet.classes.Instituicao
@@ -50,7 +50,7 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
 
     lateinit var rvServicos: RecyclerView
     lateinit var servicosAdapter: ServicosAdapter
-    lateinit var feedAdapter: feedAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_perfil_instituicao_visao_instituicao)
@@ -71,6 +71,7 @@ class perfilInstituicaoVisaoInstituicaoActivity : AppCompatActivity() {
 
         rvServicos = findViewById(R.id.rv_servicos)
         servicosAdapter = ServicosAdapter(this)
+
 
         rvServicos.layoutManager =
             LinearLayoutManager(
