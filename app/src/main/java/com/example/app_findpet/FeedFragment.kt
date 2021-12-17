@@ -42,10 +42,10 @@ class FeedFragment : Fragment() {
 
         val context = view.context
 
-        rcvFeed = view.findViewById(R.id.recyclerViewInstituicao)
-        feedAdapter = FeedAdapter(context)
-        rcvFeed.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        rcvFeed.adapter = feedAdapter
+//        rcvFeed = view.findViewById(R.id.recyclerViewInstituicao)
+//        feedAdapter = FeedAdapter(context)
+//        rcvFeed.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+//        rcvFeed.adapter = feedAdapter
 
         val dados = context.getSharedPreferences("dados_usuario", 0)
         val token = dados.getString("token", "")

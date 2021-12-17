@@ -12,7 +12,6 @@ import com.example.app_findpet.apiViacep.Cep
 import com.example.app_findpet.apiViacep.RetrofitFactoryViacep
 import com.example.app_findpet.ui.perfilInstituicaoVisaoInstituicaoActivity
 import com.example.app_findpet.utils.MaskFormatUtil
-import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
@@ -98,17 +97,17 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
     private fun buscarEndereco(CEP: String) {
 
         val remote = RetrofitFactoryViacep().retrofitService()
-        val call: Call<Cep> = remote.getCep(CEP)
+        val call: retrofit2.Call<Cep> = remote.getCep(CEP)
 
         call.enqueue(object : Callback<Cep> {
-            override fun onResponse(call: Call<Cep>, response: Response<Cep>) {
+            override fun onResponse(call: retrofit2.Call<Cep>, response: Response<Cep>) {
                 val endereco = response.body()
                 if (endereco != null) {
                     editTextRua.setText(endereco.logradouro)
                 }
             }
 
-            override fun onFailure(call: Call<Cep>, t: Throwable) {
+            override fun onFailure(call: retrofit2.Call<Cep>, t: Throwable) {
                 Log.i("cep", t.message.toString())
             }
         })
@@ -136,11 +135,11 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
         instituicao.complemento = editTextComplemento.text.toString()
 
         val remote = RetrofitFactoryFindpet().retrofitServiceFindpet()
-        val call: Call<Instituicao> = remote.criarInstituicao(instituicao)
+        val call: retrofit2.Call<Instituicao> = remote.criarInstituicao(instituicao)
 
         call.enqueue(object : Callback<Instituicao> {
 
-            override fun onResponse(call: Call<Instituicao>, response: Response<Instituicao>) {
+            override fun onResponse(call: retrofit2.Call<Instituicao>, response: Response<Instituicao>) {
                 if (response.code() == 400) {
                     return Toast.makeText(
                         applicationContext,
@@ -176,7 +175,7 @@ class tela_cadastro_instituicoes : AppCompatActivity() {
                 }
             }
 
-            override fun onFailure(call: Call<Instituicao>, t: Throwable) {
+            override fun onFailure(call: retrofit2.Call<Instituicao>, t: Throwable) {
                 Log.i("xpto", t.message.toString())
             }
 
